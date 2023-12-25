@@ -17,11 +17,10 @@ export default hopeTheme({
         home: "",
         hotReload: false,
         lastUpdated: false,
-        locales: undefined,
         logoDark: "",
         navTitle: undefined,
         navbarIcon: true,
-        nextLink: false,
+        nextLink: true,
         outlookLocales: undefined,
         pageInfo: undefined,
         prevLink: true,
@@ -141,16 +140,29 @@ export default hopeTheme({
 
             // all features are enabled for demo, only preserve features you need here
             mdEnhance: {
+                component: true,
+                footnote: true,
                 align: true,
                 attrs: true,
+                chart: true,
                 codetabs: true,
-                component: true,
                 demo: true,
+                echarts: true,
                 figure: true,
+                flowchart: true,
+                gfm: true,
                 imgLazyload: true,
                 imgSize: true,
                 include: true,
+                katex: true,
                 mark: true,
+                mermaid: true,
+                playground: {
+                    presets: ["ts", "vue"],
+                },
+                revealJs: {
+                    plugins: ["highlight", "math", "search", "notes", "zoom"],
+                },
                 stylize: [
                     {
                         matcher: "Recommended",
@@ -168,7 +180,7 @@ export default hopeTheme({
                 sup: true,
                 tabs: true,
                 vPre: true,
-
+                vuePlayground: true,
                 // install chart.js before enabling it
                 // chart: true,
 
@@ -264,6 +276,6 @@ export default hopeTheme({
         },
     },
     {
-        // custom: true
+        custom: true
     }
 );
