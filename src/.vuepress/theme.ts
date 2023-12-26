@@ -44,10 +44,10 @@ export default hopeTheme({
             // url: "https://mister-hope.com",
         },
 
-        iconPrefix: [
-            "icon-",
-            "fa-",
-        ],
+        // iconPrefix: [
+        //     "icon-",
+        //     "fa-",
+        // ],
 
         iconAssets: [
             "//at.alicdn.com/t/c/font_4356167_3xofvy39u6o.css",
