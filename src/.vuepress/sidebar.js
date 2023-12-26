@@ -1,22 +1,22 @@
 import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
     "/": [
-        "",
-        {
-            text: "如何使用",
-            icon: "fas fa-laptop-code",
-            prefix: "demo/",
-            link: "demo/",
-            children: "structure",
-        },
+        // "",
+        // {
+        //     text: "如何使用",
+        //     icon: "fas fa-laptop-code",
+        //     prefix: "demo/",
+        //     link: "demo/",
+        //     children: "structure",
+        // },
         {
             text: "文章",
             icon: "fas fa-book",
             prefix: "posts/",
             children: "structure",
         },
-        "intro",
-        // "slides",
+        // "intro",
+        // // "slides",
     ],
     "/posts/": [
         {
@@ -116,11 +116,20 @@ export default sidebar({
             icon: "iconfont icon-linux",
             link: "/Linux/"
         },
+        "/Linux/Git/git.md"
+    ],
+    "/Linux/Git/": [
+        {
+            text: "Linux",
+            icon: "iconfont icon-linux",
+            link: "/Linux/"
+        },
         {
             text: "Git",
             icon: "iconfont icon-git",
-            link: "Linux/",
-            children: "structure"
+            link: "/Linux/Git/",
+            children: "structure",
+            // activeMatch: "^/Linux"
         }
     ]
 });

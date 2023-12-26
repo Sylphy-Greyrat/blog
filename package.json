@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "docs:build": "vuepress build src",
-    "docs:clean-dev": "vuepress dev src --clean-cache",
+    "docs:clean-dev": "tsc && vuepress dev src --clean-cache",
     "docs:dev": "vuepress dev src",
     "docs:update-package": "pnpm dlx vp-update",
     "deploy": "call deploy.bat"
