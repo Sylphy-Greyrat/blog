@@ -224,8 +224,8 @@ icon: iconfont icon-bxl-spring-boot
   - ***@EnableAutoConfiguration***：表示开启自动配置功能
     - ***@AutoConfigurationPackage***：帮助自动配置包
     - ***@Import({AutoConfigurationImportSelector.class})***：导入其他配置类
-      - getAutoConfigurationEntry：自动将一些配置类进行扫描导入***(这个方法在AutoConfigurationImportSelector.class 中)***
-  - ***@ComponentScan***：帮助进行包扫描***(只扫描所在的包及其子包)***
+      - getAutoConfigurationEntry：自动将一些配置类进行扫描导入 ***(这个方法在AutoConfigurationImportSelector.class 中)***
+  - ***@ComponentScan***：帮助进行包扫描 ***(只扫描所在的包及其子包)***
 
 Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注类中的main()方法；
 

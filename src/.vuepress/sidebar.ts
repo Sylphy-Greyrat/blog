@@ -130,7 +130,6 @@ export default sidebar({
             icon: "iconfont icon-git",
             link: "/Linux/Git/",
             children: "structure",
-            // activeMatch: "^/Linux"
         }
     ]
 });

@@ -58,7 +58,7 @@ date: 2022-9-18
   1. Servlet 方法总结：
 
      | 方法类型      | 方法名                                                       |
-     | ------------- | ------------------------------------------------------------ |
+   | ------------- | ------------------------------------------------------------ |
      | void          | destroy() <br>Called by the servlet container to indicate to a servlet that the servlet is being taken out of service.<br>由 servlet 容器调用，指示将从服务中取出该 servlet。 |
      | ServletConfig | getServletConfig()<br>Returns a ServletConfig object, which contains initialization and startup parameters for this servlet.<br />返回 ServletConfig 对象，该对象包含此 servlet 的初始化和启动参数。 |
      | String        | getServletInfo()<br>Returns information about the servlet, such as author, version,  and copyright.<br>返回有关 servlet 的信息，比如作者、版本和版权。 |
@@ -213,7 +213,7 @@ date: 2022-9-18
 
 ### 数据传递
 
-- 使用请求转发实现页面跳转时，可以使用 ***request.setAttribute(key, value)*** ，其中 key 为属性名称，String 类型；value 可以为任意对象。通过请求转发可以传递任意类型数据。在下一个 servlet 或者页面可以通过 ***Object value = (Object) request.getAttribute(key) ***读取传递的对象数据，默认类型为 Object 类型，需要进行类型转换。
+- 使用请求转发实现页面跳转时，可以使用 ***request.setAttribute(key, value)*** ，其中 key 为属性名称，String 类型；value 可以为任意对象。通过请求转发可以传递任意类型数据。在下一个 servlet 或者页面可以通过 ***Object value = (Object) request.getAttribute(key)*** 读取传递的对象数据，默认类型为 Object 类型，需要进行类型转换。
 - 使用重定向实现页面跳转，只能通过 url 进行传参，例如 dstUrl?key1=value&key2=value2 将 key1 和 key2 传递到下一个页面。但是此种传参方式只能传递字符串参数。
 
 ## Servlet技术-*Servlet生命周期*
@@ -228,7 +228,7 @@ date: 2022-9-18
 
   2. 初始化：对应于 init 方法。当 Servlet 容器创建后，会调用并且仅调用一次 init() 方法，用于初始化 Servlet 对象。无论有多少客户机访问 Servlet ，都不会重复执行 init()。
 
-  3. 服务：对应 service 方法。service() 方法是 Servlet 的核心，负责响应客户的请求。每当一个客户请求一个 HttpServlet 对象，该对象的 service() 方法就要调用，而且传递给这个方法一个***“请求”( ServletRequest )***对象和一个***“响应” (ServletRsponse)*** 对象作为参数。实际执行中是根据 Http 请求方法调用响应的 do 功能。
+  3. 服务：对应 service 方法。service() 方法是 Servlet 的核心，负责响应客户的请求。每当一个客户请求一个 HttpServlet 对象，该对象的 service() 方法就要调用，而且传递给这个方法一个 ***“请求”( ServletRequest )*** 对象和一个 ***“响应” (ServletRsponse)*** 对象作为参数。实际执行中是根据 Http 请求方法调用响应的 do 功能。
 
   4. 销毁：对应 destroy 方法。destroy() 方法仅执行一次，只在 Web 服务器端停止并卸载 Servlet 时执行。当 Servlet 对象被销毁时，并释放其占用的资源。
 
@@ -245,15 +245,15 @@ date: 2022-9-18
 
   注意： 1. 一个 Servlet 对象只有在第一次访问时被创建，之后将常驻内存，并使用该对象处理后的用户请求。
 
-  ​			 2. 一个 Servlet 对象在处理不同的客户端请求时，往往使用多线程执行，即针对每一个客户端请求开启一个线程。
+  ​	   2. 一个 Servlet 对象在处理不同的客户端请求时，往往使用多线程执行，即针对每一个客户端请求开启一个线程。
 
-  ​		 	3. Servlet 只有在 web 容器重启或者停止时候才会被销毁。
+  ​	   3. Servlet 只有在 web 容器重启或者停止时候才会被销毁。
 
 ### Servlet处理请求的流程
 
 1. 客户端发送请求给服务器。
 
-2. 容器根据请求及 web.xml 判断对应的 Servlet 是否存在，如果不存在则返回404。
+2. 容器根据请求及 web.xml 判断对应的 Servlet 是否存在，如果不存在则返回 404。
 
 3. 容器根据请求及 web.xml 判断对应的 Servlet 是否已经被实例化，若是相应的 Servlet 没有被实例化，则容器将会加载相应的 Servlet 到 Java 虚拟机并实例化。
 

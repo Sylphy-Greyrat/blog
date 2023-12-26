@@ -239,7 +239,7 @@ icon: iconfont icon-http
 
    - 在目前移动端开发中，前端传递参数通常使用 JSON 格式进行参数传递，此时 Content-Type 对应的值为 application/json。在 SpringBoot 中，要获取 json 格式的参数值，需要使用 ***@RequestBody*** 的注解。
 
-     1. 由于 JSON 数据只能通过 POST 请求进行传递(数据存放在 Http Body 中)，因此 ***@RequestBody*** 需要和***@PostMapping***配置使用，此时不能使用 GET 请求。
+     1. 由于 JSON 数据只能通过 POST 请求进行传递(数据存放在 Http Body 中)，因此 ***@RequestBody*** 需要和 ***@PostMapping*** 配置使用，此时不能使用 GET 请求。
 
      2. @RequestBody 可以接收 HTTP 请求体中的数据，但是必须要指定 ***Content-Type*** 请求体的媒体类型为 ***application/json*** ，表示接收  json 类型的数据。
 
@@ -314,7 +314,7 @@ icon: iconfont icon-http
 
    - status 成员变量⼀般使用 HttpStatus 枚举类表示，其中涵盖了几乎所有常用状态码，使用时可以直接翻看源码。
 
-   - <font color='red'>ResponseEntity</font> 的基本使用流程如下，注意我们此时没有使用 ***@ResponseBody***（但是推荐直接使用***@RestController*** ）：
+   - <font color='red'>ResponseEntity</font> 的基本使用流程如下，注意我们此时没有使用 ***@ResponseBody***（但是推荐直接使用 ***@RestController*** ）：
 
      ~~~java
      @RestController
