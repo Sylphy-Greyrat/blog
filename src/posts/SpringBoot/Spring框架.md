@@ -10,7 +10,7 @@ tag:
 date: 2022-07-10
 icon: iconfont icon-bxl-spring-boot
 ---
-# Spring框架
+# Spring 框架
 
 ## 正射与反射
 
@@ -18,15 +18,15 @@ icon: iconfont icon-bxl-spring-boot
 
 ### 正射与反射的概述
 
-- 正射：正射就是在运行时就知道要操作的类是什么，并且可以使用new关键字来创建对象。
+- 正射：正射就是在运行时就知道要操作的类是什么，并且可以使用 new 关键字来创建对象。
 - 反射：反射就是在运行时才知道要操作的类是什么，并且可以在运行时获取类的完整构造，并调用对应的方法。
   - 优点：
     1. 在程序运⾏过程中可以操作类对象，增加了程序的灵活性。
-    2. 解耦，从⽽提⾼程序的可扩展性，提⾼代码的复⽤率，⽅便外部调⽤。
+    2. 解耦，从而提高程序的可扩展性，提高代码的复用率，⽅便外部调用。
     3. 对于任何⼀个类，当知道它的类名后，就能够知道这个类的所有属性和⽅法；⽽对于任何⼀个对象，都能够调⽤它的⼀个任意⽅法。
   - 缺点：
     1. 性能问题：Java 反射中包含了⼀些动态类型，JVM ⽆法对这些动态代码进⾏优化，因此通过反射来操作的⽅式要⽐正常操作效率更低。
-    2. 安全问题：使⽤反射时要求程序必须在⼀个没有安全限制的环境中运⾏，如果程序有安全限制，就不能使⽤反射。
+    2. 安全问题：使⽤反射时要求程序必须在⼀个没有安全限制的环境中运⾏，如果程序有安全限制，就不能使用反射。
     3. 程序健壮性：反射允许代码执⾏⼀些平常不被允许的操作，破坏了程序结构的抽象性，导致平台发⽣变化时抽象的逻辑结构⽆法被识别。
 
 ### 正射与反射创建对象的方法
@@ -50,9 +50,9 @@ icon: iconfont icon-bxl-spring-boot
 
    上面两段代码的执行结果是完全一样的，但其思路完全不一样，第一段代码在未运行时就已经确定了要运行的类(Apple)，而第二段代码则是在运行时通过字符串值才得知要运行的类(com.javaee.reflect.Apple)。
 
-### 反射常用的API
+### 反射常用的 API
 
-1. 获取反射中的Class对象
+1. 获取反射中的 Class 对象
 
    1. ***Class.forName()*** 静态方法：当你知道该类的全路径名时，你可以使用该方法获取*Class*类对象
 
@@ -175,14 +175,14 @@ public class BasicSingleton {
 
     ~~~java
     public static BasicSingleton getInstance() {
-             if (instance == null) {		// 线程A和线程B同时看到singleton = null，如果不为null，则直接返回singleton
-             	synchronized(BasicSingleton.class) {		// 线程A或线程B获得该锁进⾏初始化
-                             if (instance == null) {		// 其中⼀个线程进⼊该分⽀，另外⼀个线程则不会进⼊该分⽀
-                                     instance = new BasicSingleton();
-    			}
-                     }
-    	}
-    	return instance;
+        if (instance == null) {        // 线程A和线程B同时看到singleton = null，如果不为null，则直接返回singleton
+            synchronized (BasicSingleton.class) {        // 线程A或线程B获得该锁进⾏初始化
+                if (instance == null) {        // 其中⼀个线程进⼊该分⽀，另外⼀个线程则不会进⼊该分⽀
+                    instance = new BasicSingleton();
+                }
+            }
+        }
+        return instance;
     }
     ~~~
 
@@ -199,7 +199,7 @@ public class BasicSingleton {
 
     但还有一个问题：***指令重排***
 
-    - 指令重排序是指：JVM在保证最终结果正确的情况下，可以不按照程序编码的顺序执⾏语句，尽可能提⾼程序的性能。
+    - 指令重排序是指：JVM 在保证最终结果正确的情况下，可以不按照程序编码的顺序执⾏语句，尽可能提高程序的性能。
 
     - 解决方法：使⽤<u>***volatile***</u>关键字修饰的变量，可以保证其指令执⾏的顺序与程序指明的顺序⼀致，不会发⽣顺序变换，这样在多线程环境下就不会发⽣NPE异常，如下列代码：
 
@@ -247,7 +247,7 @@ public class BasicSingleton {
 
 ### Spring 的概述
 
-​		***Spring***是分层的***JavaSE/EE full-stack*** 轻量级开源框架，以 ***IoC（Inverse of Control 控制反转）*** 和 ***AOP（Aspect Oriented Programming 面向切面编程）***为内核，使用基本的 JavaBean 来完成以前只可能由 EJB 完成的工作，取代了 ***EJB*** 的臃肿、低效的开发模式。
+​		***Spring***是分层的***JavaSE/EE full-stack*** 轻量级开源框架，以 ***IoC（Inverse of Control 控制反转）*** 和 ***AOP（Aspect Oriented Programming 面向切面编程）*** 为内核，使用基本的 JavaBean 来完成以前只可能由 EJB 完成的工作，取代了 ***EJB*** 的臃肿、低效的开发模式。
 
 ### Spring 的框架
 
