@@ -201,7 +201,7 @@ public class BasicSingleton {
 
     - 指令重排序是指：JVM 在保证最终结果正确的情况下，可以不按照程序编码的顺序执⾏语句，尽可能提高程序的性能。
 
-    - 解决方法：使⽤<u>***volatile***</u>关键字修饰的变量，可以保证其指令执⾏的顺序与程序指明的顺序⼀致，不会发⽣顺序变换，这样在多线程环境下就不会发⽣NPE异常，如下列代码：
+    - 解决方法：使⽤ <u>***volatile***</u> 关键字修饰的变量，可以保证其指令执⾏的顺序与程序指明的顺序⼀致，不会发⽣顺序变换，这样在多线程环境下就不会发⽣ NPE 异常，如下列代码：
 
       ~~~java
       private static volatile BasicSingleton instance = null;
@@ -305,11 +305,11 @@ Spring 容器支持两种格式的配置文件：***Properties 文件***、***XM
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
        	http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<!—使用id属性定义bean1,其对应的实现类为cn.itcast.bean1 -->
+	<!-- 使用id属性定义bean1,其对应的实现类为cn.itcast.bean1 -->
 	<bean id="bean1" class="cn.itcast.bean1"/>
-	<!—使用name属性定义bean2,其对应的实现类为cn.itcast.bean2 -->
+	<!-- 使用name属性定义bean2,其对应的实现类为cn.itcast.bean2 -->
 	<bean name="bean2" class="cn.itcast.bean2"/>
-	<!—注意如果在Bean中未指定id和name，则Spring会将class值当作id使用。 -->
+	<!-- 注意如果在Bean中未指定id和name，则Spring会将class值当作id使用。 -->
 </beans>
 ~~~
 
