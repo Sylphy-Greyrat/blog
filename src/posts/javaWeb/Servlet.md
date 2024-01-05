@@ -58,7 +58,7 @@ date: 2022-9-18
   1. Servlet 方法总结：
 
      | 方法类型      | 方法名                                                       |
-   | ------------- | ------------------------------------------------------------ |
+     | ------------- | ------------------------------------------------------------ |
      | void          | destroy() <br>Called by the servlet container to indicate to a servlet that the servlet is being taken out of service.<br>由 servlet 容器调用，指示将从服务中取出该 servlet。 |
      | ServletConfig | getServletConfig()<br>Returns a ServletConfig object, which contains initialization and startup parameters for this servlet.<br />返回 ServletConfig 对象，该对象包含此 servlet 的初始化和启动参数。 |
      | String        | getServletInfo()<br>Returns information about the servlet, such as author, version,  and copyright.<br>返回有关 servlet 的信息，比如作者、版本和版权。 |
@@ -67,7 +67,7 @@ date: 2022-9-18
   
   2. GenericServlet 它是一个类，实现了 Servlet 接口
 
-  3. HttpServlet ,它是一个类，实现了 Servlet 接口，同时继承了 GenericServlet
+  3. HttpServlet 它是一个类，实现了 Servlet 接口，同时继承了 GenericServlet
 
 - 创建 Servlet 三种方式
 

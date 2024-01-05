@@ -59,7 +59,7 @@ icon: iconfont icon-http
 
 ### URL地址映射
 
-- 地址映射也成为地址路由，指由url地址映射到控制器 Controller 的过程。在Servlet中，我们是用注解 ***@WebServlet*** 或者 XML 配置文件的方式来实现地址映射。SpringBoot 提供了更为简单和快捷的映射注解。
+- 地址映射也成为地址路由，指由 url 地址映射到控制器 Controller 的过程。在 Servlet 中，我们是用注解 ***@WebServlet*** 或者 XML 配置文件的方式来实现地址映射。SpringBoot 提供了更为简单和快捷的映射注解。
 
 - ***@RequestMapping*** 是 SpringBoot 提供的⼀个地址映射的基础注解，主要用途是将 Web 请求与请求处理类中的方法进行映射。
 
@@ -216,9 +216,7 @@ icon: iconfont icon-http
 
    - 注： 1.@CookieValue 标注在方法形参上，用来获取 HTTP 请求中对应的 cookie 值。
 
-     ​		2.@CookieValue 标注在方法形参上，用来获取 HTTP 请求中对应的 cookie 值。
-
-     ​		3.不能使⽤ Map <String, String> 或 MultiValueMap <String, String> 一次性获取所有 cookies 键值对
+     ​		2.不能使⽤ Map <String, String> 或 MultiValueMap <String, String> 一次性获取所有 cookies 键值对
 
 6. 获取和设置 session 属性数据
 
@@ -308,9 +306,9 @@ icon: iconfont icon-http
         3. ***@ResponseBody*** 标注到类上时，与 ***@Controller*** 相结合可以简写成 ***@RestController*** ，这也是通常使用的注解。
         4. 我们可以灵活地构造合适的返回对象，结合 ***@ResponseBody*** ，用作与实际项目最匹配的响应体返回。
 
-2. <font color='red'>ResponseEntity</font>
+2. <font color='red'>ResponseEntity</font> 是 <font color='orange'>HttpEntity</font> 的子类，它除了拥有父类中的 headers 和 body 成员变量，自己还新增了⼀个 status 成员变量。因此， <font color='red'>ResponseEntity</font> 集合了响应体的三个最基本要素：<u><font color='cornflowerblue'>响应头、状态码和响应数据</font></u>。它的层次结构如下：
 
-   ​		<font color='red'>ResponseEntity</font> 是 <font color='orange'>HttpEntity</font> 的子类，它除了拥有父类中的 headers 和 body 成员变量，自己还新增了⼀个 status 成员变量。因此， <font color='red'>ResponseEntity</font> 集合了响应体的三个最基本要素：<u><font color='cornflowerblue'>响应头、状态码和响应数据</font></u>。它的层次结构如下：![](./img/60.png)
+   ![](./img/60.png)
 
    - status 成员变量⼀般使用 HttpStatus 枚举类表示，其中涵盖了几乎所有常用状态码，使用时可以直接翻看源码。
 
@@ -329,8 +327,8 @@ icon: iconfont icon-http
 
    - 用法：
 
-     1. <font color='red'>ResponseEntity</font> 直接用作方法返回值，表示将其作为HTTP响应：包括状态码、响应头和响应体。
-     2. <font color='red'>ResponseEntity</font> 中包含 status 、headers 和 body 三个成员变量，共同组成HTTP响应。
+     1. <font color='red'>ResponseEntity</font> 直接用作方法返回值，表示将其作为 HTTP 响应：包括状态码、响应头和响应体。
+     2. <font color='red'>ResponseEntity</font> 中包含 status 、headers 和 body 三个成员变量，共同组成 HTTP 响应。
      3. <font color='red'>ResponseEntity</font> 具有链式的静态方法，可以很方便地构造实例对象。
 
 ### 数据校验
@@ -404,7 +402,7 @@ icon: iconfont icon-http
         }
         ~~~
    
-     2. 编写Controller方法：
+     2. 编写 Controller 方法：
    
         ~~~java
         @GetMapping("/student")
@@ -461,7 +459,7 @@ icon: iconfont icon-http
        }
        ~~~
 
-   2. 编写Controller方法：
+   2. 编写 Controller 方法：
 
        ~~~java
        @GetMapping("/student")
@@ -471,7 +469,7 @@ icon: iconfont icon-http
        ~~~
 
        - 上述代码的流程：
-         1. 创建Controller类：***@Controller*** 或 ***@RestController*** 注解。
+         1. 创建 Controller 类：***@Controller*** 或 ***@RestController*** 注解。
          2. 指定分发地址：***@RequestMapping*** 以及各种 ***@XxxMapping*** 注解。
          3. 接受请求参数：***@PathVariable*** 、 ***@RequestParam*** 、 ***@RequestHeader*** 、 ***@CookieValue*** 、 ***@RequestBody*** 、 <font color='orange'>HttpEntity</font> 以及 ***@RequestPart*** 和 MultipartFile 。
          4. 发送响应数据： ***@ResponseBody*** 、 <font color='red'><font color='red'>ResponseEntity</font></font> 以及 ***@ExceptionHandler*** 和 ***@ControllerAdvice***。
@@ -533,11 +531,11 @@ icon: iconfont icon-http
 
 ​		Spring 通过 ***@Controller*** 注解找到相应的控制器类后，还需要知道控制器内部对每一个请求是如何处理的，这就需要使用 ***@RequestMapping*** 注解类型，它用于映射一个请求或一个方法。使用时，可以标注在一个方法或一个类上。
 
-- 标注在方法上：作为请求处理方法在程序接收到对应的URL请求时被调用
+- 标注在方法上：作为请求处理方法在程序接收到对应的 URL 请求时被调用
 
 - 标注在类上：该类中的所有方法都将映射为相对于类级别的请求，表示该控制器所处理的所有请求都被映射到 value 属性值所知道的路径下。
 
-- ***@RequestMapping***注解除了可以指定 value 属性外，还可以指定其他一些属性，如下表所示：
+- ***@RequestMapping*** 注解除了可以指定 value 属性外，还可以指定其他一些属性，如下表所示：
 
   | 属性名   | 类型            | 描述                                                         |
   | -------- | --------------- | ------------------------------------------------------------ |
@@ -567,11 +565,11 @@ Spring MVC 中的视图解析器负责解析视图，可以通过在配置文件
 
 在上述代码中，定义了一个视图解析器，并设置了视图的前缀好后缀属性。这样设置后，方法中所定义的 view 路径将可以简化。例如，入门案例中的逻辑视图名只需设置为“first”，而不再需要设置为“/WEB-INF/jsp/first.jsp”，在访问时视图解析器会自动的增加前缀和后缀。
 
-## Spring MVC的整合支持
+## Spring MVC 的整合支持
 
 ----
 
-### Spring MVC自动配置
+### Spring MVC 自动配置
 
 ​		在 Spring Boot 项目中，一旦引入了 Web 依赖启动器 <u>spring-boot-starter-web</u> ，那么Spring Boot 整合 Spring MVC 框架默认实现的一些 xxxAutoConfiguration 自动配置类就会自动生效，几乎可以在无任何额外配置的情况下进行 Web 开发。
 
@@ -586,7 +584,7 @@ Spring Boot 整合 Spring MVC 的自动化配置功能特性：
 - 支持定制应用图标 favicon.ico ；
 - 自动初始化 Web 数据绑定器 ConfigurableWebBindingInitializer 。
 
-### Spring MVC功能拓展实现
+### Spring MVC 功能拓展实现
 
 1. 注册视图管理器。在项目的软件包下创建一个实现 WebMvcConfigurer 接口的配置类 MyMVCconfig ，用于对MVC框架功能扩展。
 
@@ -601,7 +599,7 @@ Spring Boot 整合 Spring MVC 的自动化配置功能特性：
    }
    ~~~
 
-   ​		MyMVCconfig 实现了接口 WebMvcConfigurer 的 addViewControllers(ViewControllerRegistry registry) 方法。在 addViewControllers() 方法内部，使用 ViewControllerRegistry 的 addViewController() 方法分别定义了“test”和"/login.html"的请求控制，并使用 setViewName(“login”) 方法将路径映射为 login.html 页面。
+   MyMVCconfig 实现了接口 WebMvcConfigurer 的 addViewControllers(ViewControllerRegistry registry) 方法。在 addViewControllers() 方法内部，使用 ViewControllerRegistry 的 addViewController() 方法分别定义了“test”和"/login.html"的请求控制，并使用 setViewName(“login”) 方法将路径映射为 login.html 页面。
 
 2. 注册自定义拦截器。WebMvcConfigurer 接口提供了许多MVC开发相关方法，例如，添加拦截器方法 addInterceptors() 、添加格式化器方法 addFormatters() 等。接下来，以 WebMvcConfigurer 接口中添加拦截器的方法 addInterceptors() 为例，讲解扩展 Spring Boot 框架的MVC功能。
 

@@ -35,7 +35,7 @@ icon: iconfont icon-bxl-spring-boot
 
 1. JSP (Java Server Pages)的概述
 
-   - 在 HTML 中嵌入Java 脚本语音
+   - 在 HTML 中嵌入 Java 脚本语音
    - 由应用服务器中的 JSP 引擎来编译和只行嵌入的 Java 脚本语言命令
    - 然后将生成的整个页面信息返回给客户端
 
@@ -43,10 +43,10 @@ icon: iconfont icon-bxl-spring-boot
 
    ![img](./img/fef.png)
 
-3. JSP执行过程
+3. JSP 执行过程
 
    - Web 容器处理 JSP 文件请求需要经过3个阶段：
-     1. 编译阶段：JSP 文件会被 Web 容器中的 JSP 引擎转换成 Java 源码
+     1. 翻译阶段：JSP 文件会被 Web 容器中的 JSP 引擎转换成 Java 源码
      2. 编译阶段：Java 源码会被编译成可执行的字节码
      3. 执行阶段：容器接受了客户端的请求后，执行编译成字节码的 JSP 文件；处理完请求后，容器把生产的页面反馈给客户端进行显示
 
@@ -60,7 +60,7 @@ icon: iconfont icon-bxl-spring-boot
 
      ![djw](./img/d5.png)
 
-5. JSP常用内置对象
+5. JSP 常用内置对象
 
    - JSP 内置对象是 Web 容器创建的一组对象
 
@@ -70,7 +70,7 @@ icon: iconfont icon-bxl-spring-boot
 
    - 常用内置对象：
 
-     1. ***out对象***：用于向客户端输出数据
+     1. ***out 对象***：用于向客户端输出数据
 
         常用方法：
 
@@ -235,10 +235,10 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
 
 ---
 
-1. 初始化Spring Application实例：
-   1. 判断当前项目类型：查看classpath类路径webApplicationType下是否存在某个特征类
-   2. 应用的初始化器设置：获取所有可用的应用初始化器类ApplicationContextInitializer
-   3. 应用的监听设置：获取所有可用的监听器类ApplicationListener
+1. 初始化 Spring Application 实例：
+   1. 判断当前项目类型：查看 classpath 类路径 webApplicationType 下是否存在某个特征类
+   2. 应用的初始化器设置：获取所有可用的应用初始化器类 ApplicationContextInitializer
+   3. 应用的监听设置：获取所有可用的监听器类 ApplicationListener
    4. 设置项目启动类：this.mainApplicationClass = this.deduceMainApplicationClass()
    
 2. 初始化Spring Boot项目启动：
@@ -263,10 +263,10 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
 1. 使用 ***@ConfigurationProperties*** 注入属性
 
    - 相关注解：
-     1. ***@Component***：生成当前类的实例对象存到IOC容器中
-     2. ***@ConfigurationProperties(prefix = "xxx")*** ：将配置文件中的前缀为xxx的每个属性的值映射到当前类中是变量上
+     1. ***@Component***：生成当前类的实例对象存到 IOC 容器中
+     2. ***@ConfigurationProperties(prefix = "xxx")*** ：将配置文件中的前缀为 xxx 的每个属性的值映射到当前类中是变量上
 
-   使用 ***@ConfigurationProperties***注解批量注入属性值时，要保证配置文件中的属性与对应实体类的属性***一致*** ，否则无法正确获取并注入属性值。
+   使用 ***@ConfigurationProperties*** 注解批量注入属性值时，要保证配置文件中的属性与对应实体类的属性***一致*** ，否则无法正确获取并注入属性值。
 
 2. 使用 ***@Value*** 注入属性
 
@@ -274,21 +274,21 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
      1. ***@Component***
      2. ***@Value("${test.xxx}")***
 
-   使用 ***@Value*** 注解对每一个属性注入设置，免去了属性setXX()方法
+   使用 ***@Value*** 注解对每一个属性注入设置，免去了属性 setXX() 方法
 
 ***
 
 两种注解的对比分析：
 
 | 对比点           | @ConfigurationProperties | @Value   |
-| ---------------- | ------------------------ | -------- |
-| 底层框架         | Spring Boot              | Spring   |
-| 功能             | 批量注入配置文件中的属性 | 单个注入 |
-| 属性setXX()方法  | 需要                     | 不需要   |
-| 复杂类型属性注入 | 支持                     | 不支持   |
-| 松散绑定         | 支持                     | 不支持   |
-| JSR303数据校验   | 支持                     | 不支持   |
-| SpEL表达式       | 不支持                   | 支持     |
+|---------------| ------------------------ | -------- |
+| 底层框架          | Spring Boot              | Spring   |
+| 功能            | 批量注入配置文件中的属性 | 单个注入 |
+| 属性 setXX() 方法 | 需要                     | 不需要   |
+| 复杂类型属性注入      | 支持                     | 不支持   |
+| 松散绑定          | 支持                     | 不支持   |
+| JSR303 数据校验   | 支持                     | 不支持   |
+| SpEL 表达式      | 不支持                   | 支持     |
 
 ## Spring Boot 自定义配置
 
@@ -306,7 +306,7 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
 
    - 相关注解：
 
-     1. ***@ImportResource("classpath:xxx.xml")***：指定XML文件位置
+     1. ***@ImportResource("classpath:xxx.xml")***：指定 XML 文件位置
 
    - 注意在测试类中需要引入 ***ApplicationContext*** 实体类 Bean，并新增一个测试方法进行输出测试
 
@@ -314,6 +314,7 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
      @Autowired
      private ApplicationContext applicationContext;
      @Test
+     @ImportResource("classpath:xxx.xml")
      void contextLoads() {
      	System.out.println(applicationContext.containsBean("xxx"));
      }
@@ -348,7 +349,7 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
 
 1. profile文件多环境配置
 
-   1. 多环境配置文件格式：application-{profile}.properties	***注：{profile}为对应具体的环境标识***
+   1. 多环境配置文件格式：application-{profile}.properties	***注：{profile} 为对应具体的环境标识***
 
    2. 激活指定环境的方式
 
@@ -369,7 +370,7 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
 2. @profile注解多环境配置
 
    - 相关注解：
-     1. @Profile(value = “{profile}”)：作用于类，通过value属性指定环境配置
+     1. @Profile(value = “{profile}”)：作用于类，通过 value 属性指定环境配置
    - 在全局配置文件设置 spring.profiles.actice 属性激活
      - 在application.properties文件下输入spring.profiles.actice = \{profile}
 
@@ -379,7 +380,7 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
 
 1. 随机值设置
 
-   1. 语法格式：${random.xx}	***注：xx表示需要指定生成的随机数类型和范围。***
+   1. 语法格式：${random.xx}	***注：xx 表示需要指定生成的随机数类型和范围。***
 
    2. 示例代码：
 
@@ -399,7 +400,7 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
 
 2. 参数间引用
 
-   1. 语法格式：${xx}	***注：xx表示先前在配置文件中已经配置过的属性名。***
+   1. 语法格式：${xx}	***注：xx 表示先前在配置文件中已经配置过的属性名。***
 
    2. 示例代码：
 

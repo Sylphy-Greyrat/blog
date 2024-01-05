@@ -16,4 +16,4 @@ rem git push -u origin master
 
 git push -f git@www.ozh.asia:/home/git/repos/blog.git master
 
-pause
+@REM pause
