@@ -1,3 +1,11 @@
 // you can change colors here
 $theme-color: #e4bbb5;
-$font-family: '"Noto Serif SC", serif';
+//$font-family: '"Noto Serif SC", serif';
+$font-family: '"myFort", serif';
+
+@font-face {
+  font-family: myFort;
+  src: url(/fonts/TW-Kai-98_1.ttf);
+  font-size: 50px;
+  font-display: swap;
+}

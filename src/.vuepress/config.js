@@ -68,30 +68,6 @@ export default defineUserConfig({
         })
     ],
     head: [
-        // 导入相应链接
-        ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
-        [
-            "link",
-            { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
-        ],
-        [
-            "link",
-            {
-                href: "https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap", rel: "stylesheet",
-            },
-        ],
-        ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
-        [
-            "link",
-            { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
-        ],
-        [
-            "link",
-            {
-                href: "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap",
-                rel: "stylesheet",
-            },
-        ],
         [
             'link', { href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3", rel: "stylesheet" }
         ],

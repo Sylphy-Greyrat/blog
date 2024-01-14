@@ -29,7 +29,8 @@ export default sidebar({
             text: "规范",
             icon: "iconfont icon-repo1",
             children: [
-                "代码规范"
+                "代码规范",
+                "基础算法"
             ],
         }
     ],
