@@ -80,6 +80,19 @@ export default defineUserConfig({
         [
             'script', {src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3"}
         ],
+        // 线上字体的链接
+        ["link", {rel: "preconnect", href: "https://fonts.googleapis.com"}],
+        [
+            "link",
+            {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: ""},
+        ],
+        [
+            "link",
+            {
+                href: "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap",
+                rel: "stylesheet",
+            },
+        ],
     ],
     // Enable it with pwa
     // shouldPrefetch: false,
