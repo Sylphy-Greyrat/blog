@@ -2,6 +2,7 @@ import {defineUserConfig} from "vuepress";
 import theme from "./theme.js";
 import {getDirname, path} from "@vuepress/utils";
 import {docsearchPlugin} from "@vuepress/plugin-docsearch";
+import { autoCatalogPlugin } from "vuepress-plugin-auto-catalog";
 import {registerComponentsPlugin} from "@vuepress/plugin-register-components";
 
 const __dirname = getDirname(import.meta.url);
@@ -24,6 +25,7 @@ export default defineUserConfig({
     theme,
     plugins: [
         // registerComponentsPlugin({}),
+        // autoCatalogPlugin({}),
         docsearchPlugin({
             appId: "CJHTES6ZNV",
             apiKey: "30252943786fb72756df73609c52f61a",

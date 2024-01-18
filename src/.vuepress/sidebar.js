@@ -26,12 +26,56 @@ export default sidebar({
             prefix: "代码开发"
         },
         {
+            text: "算法",
+            link: "/posts/algorithm/",
+            icon: "iconfont icon-suanfaku",
+            // prefix: "algorithm",
+            // children: "structure"
+        },
+        {
+            text: "Ajax",
+            icon: "iconfont icon-ajax",
+            link: "/posts/Ajax/"
+        },
+        {
+            text: "javaWeb",
+            icon: "iconfont icon-Group",
+            link: "/posts/javaWeb/"
+        },
+        {
+            text: "Spring Boot",
+            icon: "iconfont icon-bxl-spring-boot",
+            link: "/posts/SpringBoot/"
+        },
+        {
+            text: "Vue",
+            icon: "iconfont icon-vuejs",
+            link: "/posts/vue/"
+        }, {
+            text: "Jeecg",
+            icon: "fas fa-laptop-code",
+            link: "/posts/jeecg/"
+        },
+        {
             text: "规范",
             icon: "iconfont icon-repo1",
             children: [
                 "代码规范",
-                "基础算法"
             ],
+        }
+    ],
+    "/posts/algorithm/": [
+        {
+            text: "代码开发",
+            icon: "fas fa-code",
+            link: "/posts/"
+        },
+        {
+            text: "算法",
+            link: "/posts/algorithm/",
+            icon: "iconfont icon-suanfaku",
+            // prefix: "algorithm",
+            children: "structure"
         }
     ],
     "/posts/Ajax/": [

@@ -18,6 +18,7 @@ export default defineUserConfig({
     theme,
     plugins: [
         // registerComponentsPlugin({}),
+        // autoCatalogPlugin({}),
         docsearchPlugin({
             appId: "CJHTES6ZNV",
             apiKey: "30252943786fb72756df73609c52f61a",
