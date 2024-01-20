@@ -50,7 +50,7 @@ export default hopeTheme({
         // ],
 
         iconAssets: [
-            "//at.alicdn.com/t/c/font_4356167_rod05cozycs.css",
+            "//at.alicdn.com/t/c/font_4356167_609l9f9t0yn.css",
             "fontawesome-with-brands",
         ],
 
@@ -181,6 +181,7 @@ export default hopeTheme({
                 tabs: true,
                 vPre: true,
                 vuePlayground: true,
+                mathjax: false,
                 // install chart.js before enabling it
                 // chart: true,
 
