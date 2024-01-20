@@ -2,7 +2,7 @@
 $theme-color: #e4bbb5;
 //$font-family: '"Noto Serif SC", serif';
 //$font-family: '"myFort", "Noto Serif SC"';
-$font-family: '"Noto", serif';
+$font-family: '"Noto-Regular", serif';
 
 @font-face {
   font-family: myFort;
@@ -12,8 +12,22 @@ $font-family: '"Noto", serif';
 }
 
 @font-face {
-  font-family: Noto;
+  font-family: Noto-Bold;
   src: url(/fonts/NotoSerifSC-Bold.otf);
+  font-size: 50px;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Noto-SemiBold;
+  src: url(/fonts/NotoSerifSC-SemiBold.otf);
+  font-size: 50px;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Noto-Regular;
+  src: url(/fonts/NotoSerifSC-Regular.otf);
   font-size: 50px;
   font-display: swap;
 }
