@@ -1,5 +1,5 @@
 ---
-title: Session和过滤器技术
+title: Session 和过滤器技术
 #icon: fab fa-markdown
 order: 2
 category:
@@ -10,7 +10,7 @@ tag:
 date: 2022-6-30
 icon: iconfont icon-ilter
 ---
-# Session和过滤器技术
+# Session 和过滤器技术
 
 ## 会话的概述
 
@@ -21,98 +21,98 @@ icon: iconfont icon-ilter
 
 ### 会话管理技术：
 
-1. cookie技术，客户端技术。
+1. cookie 技术，客户端技术。
 
-2. session技术，服务端技术。
+2. session 技术，服务端技术。
 
 购物车案例：买完商品后，加入购物车，买的商品存到什么对象比较合适？
 
-1. 使用request域对象保存商品信息。
+1. 使用 request 域对象保存商品信息。
 
    ![无ss题](./img/无ss题.png)
 
-   结论：使用request保存商品信息不可以，因为每次发送请求，就会产生一个新的请求对象。
+   结论：使用 request 保存商品信息不可以，因为每次发送请求，就会产生一个新的请求对象。
 
-2. 使用ServletContext对象保存商品信息。
+2. 使用 ServletContext 对象保存商品信息。
 
    ![无ss题](./img/无ad.png)
 
-   结论：使用ServletContext对象保存商品信息，可以，但是不合理。
+   结论：使用 ServletContext 对象保存商品信息，可以，但是不合理。
 
-因此在开发中，保存会话过程中产生的数据，采用会话管理技术，也就是使用cookie和session技术来保存会话过程产生的数据。
+因此在开发中，保存会话过程中产生的数据，采用会话管理技术，也就是使用 cookie 和 session 技术来保存会话过程产生的数据。
 
-## Cookie对象
+## Cookie 对象
 
 ---
 
-- Cookie的概述
+- Cookie 的概述
 
-  ​	    Cookie是一种会话管理技术，它是用来保存会话过程中产生的数据，然后在浏览器和服务器交互时，会使用Cookie里面保存的数据。
+  ​	    Cookie 是一种会话管理技术，它是用来保存会话过程中产生的数据，然后在浏览器和服务器交互时，会使用 Cookie 里面保存的数据。
 
   ![无](./img/无.png)
 
-  注意：首次访问服务器，浏览器不会携带cookie到服务端。
+  注意：首次访问服务器，浏览器不会携带 cookie 到服务端。
 
-- Cookie常用的api
+- Cookie 常用的 api
 
-  1. 得到cookie对象：Cookie cookie = new Cookie(String key,String value);
+  1. 得到 cookie 对象：Cookie cookie = new Cookie(String key,String value);
 
-  2. 回写（响应）cookie到浏览器端：response.addCookie(cookie);
+  2. 回写（响应）cookie 到浏览器端：response.addCookie(cookie);
 
-  3. 得到cookie的名称：String key = cookie.getName();
+  3. 得到 cookie 的名称：String key = cookie.getName();
 
-     得到cookie的值：String value = cookie.getValue();
+     得到 cookie 的值：String value = cookie.getValue();
 
-  4. 给cookie设置生命时长：setMaxAge(int sr);
+  4. 给 cookie 设置生命时长：setMaxAge(int sr);
 
      比如：cookie.setMaxAge(60\*60\*24*7)，说明cookie能存活7天;
 
-     cookie分类：
+     cookie 分类：
 
-     1. 会话级别cookie，浏览器关闭，cookie对象就销毁了
-     2. 持久化cookie，通过setMaxAge()方法设置
+     1. 会话级别 cookie，浏览器关闭，cookie 对象就销毁了
+     2. 持久化 cookie，通过 setMaxAge() 方法设置
 
-  5. 给cookie设置路径，设置域名：
+  5. 给 cookie 设置路径，设置域名：
 
-     setPath(路径的url)，setDomain(域名);
+     setPath(路径的 url)，setDomain(域名);
 
      比如：域名就是服务器名称，例如：`www.baidu.com`
 
-  6. 得到cookie：Cookie[] cookies = request.getCookies();
+  6. 得到 cookie：Cookie[] cookies = request.getCookies();
 
-## Session对象
+## Session 对象
 
 ---
 
-### Session的概述
+### Session 的概述
 
-session是一种会话管理技术，session用来保存会话过程中的数据，保存的数据存储到服务器端。
+session 是一种会话管理技术，session 用来保存会话过程中的数据，保存的数据存储到服务器端。
 
 ![无](./img/无77.png)
 
-原理：基于cookie实现的，更确切的说是基于会话级别的cookie实现的。
+原理：基于 cookie 实现的，更确切的说是基于会话级别的 cookie 实现的。
 
 ### HttpSession API
 
 - 常用方法：
 
-  1. 得到session的id(JESSIONID对应的值)：***getId()***;
+  1. 得到 session 的 id(JESSIONID 对应的值)：***getId()***;
 
-  2. 设置session的生命时长：***setMaxInactiveInterval(int interval);***
+  2. 设置 session 的生命时长：***setMaxInactiveInterval(int interval);***
 
-  3. 销毁session：***invalidate();***
+  3. 销毁 session：***invalidate();***
 
-     得到session：***HttpSession session = getSession();***
+     得到 session：***HttpSession session = getSession();***
 
   4. 其他方法去这里查询：[***JAVA-EE-api***](..\JAVA_EE_api_中英文对照版.chm)
 
-- session域对象：作用范围一次完整的会话(包含多个请求)
+- session 域对象：作用范围一次完整的会话(包含多个请求)
 
   1. 存值：***serAttribute(String key,Object obj);***
   2. 取值：***Object obj = getAttribute(String key);***
   3. 移除：***removeAttribute(String key);***
 
-- 总结域对象：request域对象、session域对象、servletContext域对象，作用范围依次变大。
+- 总结域对象：request 域对象、session 域对象、servletContext 域对象，作用范围依次变大。
 
 ## Filter过滤器对象
 

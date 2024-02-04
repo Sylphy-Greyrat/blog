@@ -11,13 +11,13 @@ date: 2022-9-18
 ---
 # Servlet
 
-## Servlet的配置
+## Servlet 的配置
 
 ---
 
-### Servlet的概述
+### Servlet 的概述
 
-- Servlet 是一个运行在 web 服务器端的一个 java 程序，也可以认为就是一个 java 类，在使用 servlet 时，需要导入 javax.servlet 下的 jar 包，比如：**tomcat 服务器提供了 servlet 的 jar 包，所以在开发时用 tomcat 服务器就不需要再导入servlet 的 jar 包**。
+- Servlet 是一个运行在 web 服务器端的一个 java 程序，也可以认为就是一个 java 类，在使用 servlet 时，需要导入 javax.servlet 下的 jar 包，比如：**tomcat 服务器提供了 servlet 的 jar 包，所以在开发时用 tomcat 服务器就不需要再导入 servlet 的 jar 包**。
 
 - Servlet 它是一个资源，是用来被用户访问的资源，同时是一个动态资源，它是由 sun 指定的 servlet 规范。
 
@@ -85,7 +85,7 @@ date: 2022-9-18
 
 ---
 
-### 使用Servlet接受参数
+### 使用 Servlet 接受参数
 
 > - JavaServlet 中的 HttpServletRequest 提供了 getParameter() 接口用于获取客户端参数
 >
