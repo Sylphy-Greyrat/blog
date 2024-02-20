@@ -4,7 +4,7 @@ import sidebar from "./sidebar.js";
 import {MR_HOPE_AVATAR} from "./logo.js";
 
 export default hopeTheme({
-        backToTop: undefined,
+        // backToTop: undefined,
         breadcrumb: true,
         breadcrumbIcon: true,
         contributors: false,
@@ -50,7 +50,7 @@ export default hopeTheme({
         // ],
 
         iconAssets: [
-            "//at.alicdn.com/t/c/font_4356167_j782g3qbc1.css",
+            "//at.alicdn.com/t/c/font_4356167_ahw8t4iubr.css",
             "fontawesome-with-brands",
         ],
 
