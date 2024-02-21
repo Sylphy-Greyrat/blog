@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { MR_HOPE_AVATAR } from "./logo.js";
 export default hopeTheme({
-    backToTop: undefined,
+    // backToTop: undefined,
     breadcrumb: true,
     breadcrumbIcon: true,
     contributors: false,
@@ -44,9 +44,10 @@ export default hopeTheme({
     //     "fa-",
     // ],
     iconAssets: [
-        "//at.alicdn.com/t/c/font_4356167_j782g3qbc1.css",
+        "//at.alicdn.com/t/c/font_4356167_167fbveu2sk.css",
         "fontawesome-with-brands",
     ],
+    // iconAssets: "fontawesome-with-brands",
     logo: "/logo.svg",
     repo: "home/git/repos",
     docsDir: "src",

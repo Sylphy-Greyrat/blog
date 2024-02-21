@@ -50,9 +50,10 @@ export default hopeTheme({
         // ],
 
         iconAssets: [
-            "//at.alicdn.com/t/c/font_4356167_ahw8t4iubr.css",
+            "//at.alicdn.com/t/c/font_4356167_167fbveu2sk.css",
             "fontawesome-with-brands",
         ],
+        // iconAssets: "fontawesome-with-brands",
 
         logo: "/logo.svg",
 
