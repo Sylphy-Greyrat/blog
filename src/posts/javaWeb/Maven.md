@@ -15,7 +15,7 @@ icon: iconfont icon-Maven
 
 ---
 
-![image-20230625142124724](.\img\image-20230625142124724.png)
+![maven的主体框架](http://www.ozh.asia:9000/blog/maven的主体框架.png)
 
 ## maven 的安装与配置
 

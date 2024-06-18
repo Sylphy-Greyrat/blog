@@ -644,7 +644,7 @@ icon: iconfont icon-thymeleaf
 
 ### DOM 元素操作与 jquery
 
-![](./img/ssf.png)
+![DOM 树](http://www.ozh.asia:9000/blog/DOM树.png)
 
  DOM 是⼀棵树（tree）。树上有 Node（节点），Node 分为 Document（html）、Element（元素）和 Text（文本），以及其他不重要的。
 

@@ -132,7 +132,7 @@ icon: iconfont icon-bxl-spring-boot
 
 - ***单例模式是指在内存中只会创建且仅创建⼀次对象的设计模式***。在程序中***多次使用同⼀个对象且作⽤相同*** 时，为了防⽌频繁地创建对象使得内存飙升，单例模式可以让程序仅在内存中***创建⼀个对象***，让所有需要调⽤的地⽅都共享 这⼀单例对象。
 
-  ![www](./img/www.png)
+  ![单例模式的概述](http://www.ozh.asia:9000/blog/单例模式的概述.png)
 
 - 如何保证对象的唯一性
   1. 不允许其他程序⽤ new ⽅法创建对象 ***(构造函数私有化)***。
@@ -253,7 +253,7 @@ public class BasicSingleton {
 
 ​			在实际开发中，通常服务器端在采用三层体系架构，分别为***表示层(web)***、***控制层（Control）***、***业务逻辑层(service)***、***持久层(dao)***， Spring 对每一层都提供了技术支持。
 
-![](./img/图片1.png)
+![Spring 的框架](http://www.ozh.asia:9000/blog/Spring的框架.png)
 
 ### 控制反转(Inverse Of Control)和依赖注入(DI）
 
@@ -261,7 +261,7 @@ public class BasicSingleton {
 
 - 依赖注入（dependency injection）:**实现对象之间的依赖关系。** 在创建完对象之后，对象之间的关系处理就是依赖注入。
 
-  ![图片3](./img/图片3.png)
+  ![依赖注入例子](http://www.ozh.asia:9000/blog/依赖注入例子.png)
 
 注意：Spring 提供了 IOC 容器。无论创建对象、处理对象之间的依赖关系、对象创建的时间还是数量，都在 ***Spring IOC 容器***配置完成。
 
@@ -282,7 +282,7 @@ public class BasicSingleton {
 
 - IOC 工作过程
 
-  ![图片3](./img/图片4.png)
+  ![IOC 工作过程](http://www.ozh.asia:9000/blog/IOC工作过程.png)
 
 ### Bean
 
@@ -422,7 +422,7 @@ Spring 容器支持两种格式的配置文件：***Properties 文件***、***XM
 
 依赖注入存在三种实现方式，分别是 ***setter 方法注入***、***构造方法注入***和***接口注入***。
 
-![图片3](./img/图片5.png)
+![依赖注入的实现方式](http://www.ozh.asia:9000/blog/依赖注入的实现方式.png)
 
 
 
