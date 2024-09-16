@@ -41,7 +41,7 @@ icon: iconfont icon-bxl-spring-boot
 
 2. JSP页面组成
 
-   ![JSP 页面组成](http://www.ozh.asia:9000/blog/JSP页面组成.png)
+   ![JSP 页面组成](http://minio.ozh.asia/blog/JSP页面组成.png)
 
 3. JSP 执行过程
 
@@ -58,7 +58,7 @@ icon: iconfont icon-bxl-spring-boot
 
    - JSP 根据处理结果，转向不同的结果页面
 
-     ![Form 表单的处理过程](http://www.ozh.asia:9000/blog/Form表单的处理过程.png)
+     ![Form 表单的处理过程](http://minio.ozh.asia/blog/Form表单的处理过程.png)
 
 5. JSP 常用内置对象
 
@@ -199,9 +199,9 @@ icon: iconfont icon-bxl-spring-boot
 
 2. 设置
 
-   ![单元测试设置-1](http://www.ozh.asia:9000/blog/单元测试设置-1.png)
+   ![单元测试设置-1](http://minio.ozh.asia/blog/单元测试设置-1.png)
 
-   ![单元测试设置-2](http://www.ozh.asia:9000/blog/单元测试设置-2.png)
+   ![单元测试设置-2](http://minio.ozh.asia/blog/单元测试设置-2.png)
 
 ## Spring Boot 依赖管理
 
@@ -254,7 +254,7 @@ Spring Boot 应用的启动入口是 ***@SpringBootApplication*** 注解标注�
    
    6. 持续运行上下文：使监听器持续运行配置好的应用上下文
    
-      ![Spring Boot项目启动流程](http://www.ozh.asia:9000/blog/SpringBoot项目启动流程.png)
+      ![Spring Boot项目启动流程](http://minio.ozh.asia/blog/SpringBoot项目启动流程.png)
 
 ## 配置文件属性值注入
 

@@ -1,0 +1,61 @@
+pipeline {
+    agent any
+
+    environment {
+        dockerName = 'sylphy-blog'
+        // 容器端口
+        containerPort = '8089'
+        // 映射端口
+        mappedPort = '8089'
+    }
+
+    tools {
+        nodejs 'nodejs'
+    }
+
+    stages {
+        stage('pull') {
+            steps {
+                git branch: 'master', credentialsId: '4cb5c5af-e7a3-4bcc-92be-a99e34519131', url: 'git@github.com:1752773927/blog.git'
+                echo '拉取成功'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    echo '编译项目'
+                    sh 'npm run docs:build'
+
+                    try {
+                        // 多条命令合并执行
+                        sh '''
+                        docker ps
+                        docker images
+                        '''
+
+                        // 如果不是第一次运行，则清理运行的镜像信息
+                        sh "docker stop ${dockerName}"
+                        sh "docker rm ${dockerName}"
+                        sh "docker rmi ${dockerName}"
+                    } catch (Exception err) {
+                        echo 'build catch'
+                // 出错处理
+                    } finally {
+                        sh 'docker ps'
+                    }
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                //Deploy to docker image
+                echo '构建docker镜像'
+                sh "docker build -t ${dockerName} . "
+                echo '启动docker容器'
+                sh "docker run -d -p ${mappedPort}:${containerPort} --name ${dockerName} ${dockerName}"
+            }
+        }
+    }
+}

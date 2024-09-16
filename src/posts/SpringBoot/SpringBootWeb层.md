@@ -12,7 +12,7 @@ icon: iconfont icon-http
 ---
 # Spring Boot Web 层
 
-![Spring Web获取前端参数的方法](http://www.ozh.asia:9000/blog/SpringWeb获取前端参数的方法.png)
+![Spring Web获取前端参数的方法](http://minio.ozh.asia/blog/SpringWeb获取前端参数的方法.png)
 
 ## SpringBoot Web ⼯作流程
 
@@ -32,7 +32,7 @@ icon: iconfont icon-http
   10. 前端控制器进行视图渲染；(视图渲染即. 模型数据(在 ModelAndView 对象中)填充到 request 域)
   11. 前端控制器向用户响应结果
 
-  ![SpringBoot Web⼯作流程](http://www.ozh.asia:9000/blog/SpringBootWeb⼯作流程.png)
+  ![SpringBoot Web⼯作流程](http://minio.ozh.asia/blog/SpringBootWeb⼯作流程.png)
 
 ## Web层常用注解与核心层
 
@@ -308,7 +308,7 @@ icon: iconfont icon-http
 
 2. <font color='red'>ResponseEntity</font> 是 <font color='orange'>HttpEntity</font> 的子类，它除了拥有父类中的 headers 和 body 成员变量，自己还新增了⼀个 status 成员变量。因此， <font color='red'>ResponseEntity</font> 集合了响应体的三个最基本要素：<u><font color='cornflowerblue'>响应头、状态码和响应数据</font></u>。它的层次结构如下：
 
-   ![HttpEntity 的继承](http://www.ozh.asia:9000/blog/HttpEntity的继承.png)
+   ![HttpEntity 的继承](http://minio.ozh.asia/blog/HttpEntity的继承.png)
 
    - status 成员变量⼀般使用 HttpStatus 枚举类表示，其中涵盖了几乎所有常用状态码，使用时可以直接翻看源码。
 
@@ -1022,11 +1022,11 @@ Spring Boot 整合 Spring MVC 的自动化配置功能特性：
 
 2. 使用 IDEA 开发工具进行打包。IDEA 开发工具，除了提供 Java 开发便利之外，还提供好的项目打包支持。
 
-   ![使用 IDEA 开发工具进行打包](http://www.ozh.asia:9000/blog/使用IDEA开发工具进行打包.png)
+   ![使用 IDEA 开发工具进行打包](http://minio.ozh.asia/blog/使用IDEA开发工具进行打包.png)
 
 3. Jar方式部署
 
-   ![jar 包部署](http://www.ozh.asia:9000/blog/jar包部署.png)
+   ![jar 包部署](http://minio.ozh.asia/blog/jar包部署.png)
 
 ### War包方式打包部署
 
@@ -1069,6 +1069,6 @@ Spring Boot 整合 Spring MVC 的自动化配置功能特性：
 
    1. 将生成的 War 包复制到外部的 Tomcat 文件的 webapps 文件夹下(你自己的Tomcat)
 
-      ![War 包方式部署](http://www.ozh.asia:9000/blog/War包方式部署.png)
+      ![War 包方式部署](http://minio.ozh.asia/blog/War包方式部署.png)
 
    2. 然后到外部的 Tomcat 文件的 bin 文件夹下双击 startup.bat 启动Tomcat
