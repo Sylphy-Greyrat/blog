@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('pull') {
             steps {
-                git branch: 'master', credentialsId: '4cb5c5af-e7a3-4bcc-92be-a99e34519131', url: 'git@github.com:1752773927/blog.git'
+                git credentialsId: 'b0a763f7-8d0f-4bc1-9a5c-1b661199bbe0', url: 'git@github.com:Sylphy-Greyrat/blog.git'
                 echo '拉取成功'
             }
         }

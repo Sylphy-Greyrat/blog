@@ -10,10 +10,10 @@ git add -A
 
 git commit -m "deploy"
 
-rem git remote add origin git@www.ozh.asia:/home/git/repos/blog.git
+rem git remote add origin git@www.sylphy.me:/home/git/repos/blog.git
 
 rem git push -u origin master
 
-git push -f git@www.ozh.asia:/home/git/repos/blog.git master
+git push -f git@www.sylphy.me:/home/git/repos/blog.git master
 
 @REM pause

@@ -154,7 +154,7 @@ Mybatis 参考网址：[mybatis – MyBatis 3 | 配置](https://mybatis.org/myba
 
 ##### 基于 Mapper XML 映射文件
 
-​		另外一种使用 mybatis 的方式是通过映射文件完成 SQL 数据操作。基于 Mapper 映射文件的 Mybatis 应用功能更为强大，但是相对也较为复杂。首先在 resource 文件夹下创建⼀个 mapper 文件夹，用于存放每个对象的数据库接口 mapper 文件工程目录结构如下：![mapper 文件工程目录结构](http://minio.ozh.asia/blog/mapper文件工程目录结构.png)
+​		另外一种使用 mybatis 的方式是通过映射文件完成 SQL 数据操作。基于 Mapper 映射文件的 Mybatis 应用功能更为强大，但是相对也较为复杂。首先在 resource 文件夹下创建⼀个 mapper 文件夹，用于存放每个对象的数据库接口 mapper 文件工程目录结构如下：![mapper 文件工程目录结构](http://minio.sylphy.me/blog/mapper文件工程目录结构.png)
 
 XML 映射文件如下：
 
@@ -361,7 +361,7 @@ XML 映射文件如下：
 
 对象之间的关联主要分为以下三类：
 
-![对象之间的关联](http://minio.ozh.asia/blog/对象之间的关联.png)
+![对象之间的关联](http://minio.sylphy.me/blog/对象之间的关联.png)
 
 #### 关联查询
 
@@ -507,7 +507,7 @@ public class Course {
 
    此时，我们引入一个新的概念对象 DTO(Data tranfer object) 对象传输模型。在前后端分离的 Java EE 项目设计中，不少项目采用 DTO 的设计理念。DTO 通常指的是控制层到 service 层传递的数据参数封装。可以通过设计一个 DTO 类来封装查询的结果，从而将查询和原来的 POJO 类脱离。
 
-   ![DTO 的设计理念](http://minio.ozh.asia/blog/DTO的设计理念.png)
+   ![DTO 的设计理念](http://minio.sylphy.me/blog/DTO的设计理念.png)
 
    > DTO 类往往按照方向分为从前端传入后端的 dto 和从后端返回前端的结果 dto。
    >
@@ -687,13 +687,13 @@ public class StudentService {
 
 SqlSession 是 Mybatis 最重要的构建之一，可以简单的认为 Mybatis 一系列的配置目的是生成类似 JDBS 生成的 Connection对象的 SqlSession 对象，这样才能与数据库开启“沟通”，通过 SqlSession 可以实现增删改查（当然现在更加推荐是使用 Mapper 接口形式）
 
-![SqlSession 流程](http://minio.ozh.asia/blog/SqlSession流程.png)
+![SqlSession 流程](http://minio.sylphy.me/blog/SqlSession流程.png)
 
 ##### 一级缓存
 
 同一个 SqlSession 对象，在参数和 SQL 完全一样的情况先，只执行一次 SQL 语句（如果缓存没有过期）也就是只有在参数和 SQL 完全一样的情况下，才会有这种情况。一级缓存是 SqlSession 级别的缓存。在操作数据库时需要构造 sqlSession 对象，在对象中有一个数据结构用于存储数据。
 
-![一级缓存流程](http://minio.ozh.asia/blog/一级缓存流程.png)
+![一级缓存流程](http://minio.sylphy.me/blog/一级缓存流程.png)
 
 在同一个 SqlSession 中，MyBatis 会把执行的方法和参数通过算法生成缓存的键值，将键值和结果存放在一个 Map 中，如果后续的键值一样，则直接从 Map 中获取数据；
 
@@ -707,7 +707,7 @@ SqlSession 是 Mybatis 最重要的构建之一，可以简单的认为 Mybatis 
 
 二级缓存存在于 SqlSessionFactory 生命周期中。二级缓存是 mapper 级别的缓存，多个 SqlSession 去操作同一个 Mapper 的 sql 语句，多个 SqlSession 可以共用二级缓存，二级缓存是跨 SqlSession 的。UserMapper 有一个二级缓存区域（按 namespace 分），其他 mapper 也有自己的二级缓存区域（按 namespace 分）。每一个 namespace 的 mapper 都有一个二级缓存区域，两个 mapper 的 namespace 如果相同，这两个 mapper 执行 sql 查询到数据将存在相同的二级缓存区域中。
 
-![二级缓存流程](http://minio.ozh.asia/blog/二级缓存流程.png)
+![二级缓存流程](http://minio.sylphy.me/blog/二级缓存流程.png)
 
 二级缓存的开启分为两部分，一个是全局开启，一个是局部开启。当两者都开启时，二级缓存才起作用。***全局开启默认是开启，因此不需要做任何配置。如果需要关闭全局二级缓存，需要在 application 文件中添加 `cache-enabled: true` 的配置。***
 
@@ -771,7 +771,7 @@ SqlSession 是 Mybatis 最重要的构建之一，可以简单的认为 Mybatis 
          1.  使用Spring Data JPA 自定义 Repository 接口，必须继承 XXRepository<T, ID> 接口。
          2. nativeQuery = true 表示可以执行原生sql语句
   
-       ![JPA的Repository继承](http://minio.ozh.asia/blog/JPA的Repository继承.png)
+       ![JPA的Repository继承](http://minio.sylphy.me/blog/JPA的Repository继承.png)
   
   4. 编写单元测试进行接口方法测试及整合测试
 

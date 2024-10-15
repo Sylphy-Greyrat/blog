@@ -15,7 +15,7 @@ icon: iconfont icon-Maven
 
 ---
 
-![maven的主体框架](http://minio.ozh.asia/blog/maven的主体框架.png)
+![maven的主体框架](http://minio.sylphy.me/blog/maven的主体框架.png)
 
 ## maven 的安装与配置
 
