@@ -23,7 +23,7 @@ date: 2022-9-18
 
 - Servlet 的作用：它是基于 Http 协议的，主要是用来接受客户端发送的请求，处理请求，把数据响应给客户端。
 
-  ![Servlet 的用途](http://minio.sylphy.me/blog/Servlet的用途.png)
+  ![Servlet 的用途](http://101.43.49.28:9000/blog/Servlet的用途.png)
 
 ### Servlet 的依赖
 
@@ -174,7 +174,7 @@ date: 2022-9-18
 
 4. 第二个 Servlet 处理完数据后将最终处理结果返回给客户端。
 
-   具体过程如图所示：![request 实现请求转发的原理](http://minio.sylphy.me/blog/request实现请求转发的原理.png)
+   具体过程如图所示：![request 实现请求转发的原理](http://101.43.49.28:9000/blog/request实现请求转发的原理.png)
 
 5. 页面跳转方式
 
@@ -200,7 +200,7 @@ date: 2022-9-18
 
    4. 客户端收到响应结果后，从 HTTP 响应头中取得相关信息，再次发送请求数据给服务器。
 
-      具体过程如图所示：![response 实现重定向的原理](http://minio.sylphy.me/blog/response实现重定向的原理.png)
+      具体过程如图所示：![response 实现重定向的原理](http://101.43.49.28:9000/blog/response实现重定向的原理.png)
 
 2. 页面跳转方式
 
@@ -232,7 +232,7 @@ date: 2022-9-18
 
   4. 销毁：对应 destroy 方法。destroy() 方法仅执行一次，只在 Web 服务器端停止并卸载 Servlet 时执行。当 Servlet 对象被销毁时，并释放其占用的资源。
 
-     ![http 请求的过程](http://minio.sylphy.me/blog/http请求的过程.png)
+     ![http 请求的过程](http://101.43.49.28:9000/blog/http请求的过程.png)
 
 - 在 Servlet 接口类中提供了 Servlet 生命周期中的3个方法定义，相关功能说明如下：
   1. ***init()***：负责初始化 Servlet 对象。
@@ -241,7 +241,7 @@ date: 2022-9-18
 
 - Servlet 生命周期的各个阶段
 
-  ![Servlet 生命周期](http://minio.sylphy.me/blog/Servlet生命周期.png)
+  ![Servlet 生命周期](http://101.43.49.28:9000/blog/Servlet生命周期.png)
 
   注意： 1. 一个 Servlet 对象只有在第一次访问时被创建，之后将常驻内存，并使用该对象处理后的用户请求。
 

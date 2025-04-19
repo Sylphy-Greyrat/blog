@@ -275,7 +275,7 @@ git is so good
 
 7. 简图
 
-   ![指针的变化](http://www.sylphy.me:9000/blog/指针的变化.png)
+   ![指针的变化](http://101.43.49.28:9000/blog/指针的变化.png)
 
    根据以上命令序列的执行结果，我们进行了两次回退操作，恢复了最初的提交状态，并查看了相应的文件内容和提交历史记录。
 
@@ -579,25 +579,25 @@ cat .\mygit.txt
 
 ### 创建和合并分支
 
-![指针和节点](http://www.sylphy.me:9000/blog/指针和节点.png)
+![指针和节点](http://101.43.49.28:9000/blog/指针和节点.png)
 
 - V1,V2,V3 就是我们每一次的提交，也可以看作一个一个时间节点，他们串成一条线，形成一个分支
 - master 指向节点，master 就是一条分支，每次提交之后，master 就会往前走一格
 - HEAD 指向 master，意思就是表明当前是 master 分支
 
-![创建了新分支](http://www.sylphy.me:9000/blog/创建了新分支.png)
+![创建了新分支](http://101.43.49.28:9000/blog/创建了新分支.png)
 
 - 此时，我们创建了一个新的分支 dev，HEAD 指向 dev，意思就是我们当前处于 dev 分支
 
-![dev 分支提交新节点](http://www.sylphy.me:9000/blog/dev分支提交新节点.png)
+![dev 分支提交新节点](http://101.43.49.28:9000/blog/dev分支提交新节点.png)
 
 - 此时，在 dev 分支做了提交，dev 分支向前移动一步，master 分支不变
 
-![将 dev 合并到 master](http://www.sylphy.me:9000/blog/将dev合并到master.png)
+![将 dev 合并到 master](http://101.43.49.28:9000/blog/将dev合并到master.png)
 
 - 此时，我们将 dev 分支合并到 master 分支上，并且切换回 master 分支
 
-![删除 dev 分支](http://www.sylphy.me:9000/blog/删除dev分支.png)
+![删除 dev 分支](http://101.43.49.28:9000/blog/删除dev分支.png)
 
 - 此时，开发完毕，我们也不需要 dev 分支了，那我们可以直接删除 dev 分支了
 
@@ -676,11 +676,11 @@ server:
 
 之后选择将 dev 分支合并到 master 分支
 
-![idea操作方法](http://www.sylphy.me:9000/blog/idea操作方法.png)
+![idea操作方法](http://101.43.49.28:9000/blog/idea操作方法.png)
 
 随后，idea 会提示我们无法自动合并，下面就是冲突文件的展示，我们在这里简单选择处理冲突即可
 
-![冲突选择](http://www.sylphy.me:9000/blog/冲突选择.png)
+![冲突选择](http://101.43.49.28:9000/blog/冲突选择.png)
 
 处理完冲突之后我们还需要 push 一次，这样 git 记录就会展示我们在 dev 分支的提交记录和合并分支的记录
 
@@ -688,29 +688,29 @@ server:
 
 此时，master 分支上的代码是这样，但我想要修改为 Hello World
 
-![代码演示1](http://www.sylphy.me:9000/blog/代码演示1.png)
+![代码演示1](http://101.43.49.28:9000/blog/代码演示1.png)
 
 但与此同时，我正在 dev 上开发代码
 
-![代码演示2](http://www.sylphy.me:9000/blog/代码演示2.png)
+![代码演示2](http://101.43.49.28:9000/blog/代码演示2.png)
 
 ​	这个时候，在 dev 上开发的代码还未完成，我还不想提交，但是切换分支又需要将代码转移到其他分支，这个时候可以使用 **git stash** 命令，idea 的可视化面板操作相对应下图
 
-<img alt="idea的git stash操作" src="http://www.sylphy.me:9000/blog/idea的git stash操作1.png"/>
+<img alt="idea的git stash操作" src="http://101.43.49.28:9000/blog/idea的git stash操作1.png"/>
 
-<img alt="idea的git stash操作2" src="http://www.sylphy.me:9000/blog/idea的git stash操作2.png"/>
+<img alt="idea的git stash操作2" src="http://101.43.49.28:9000/blog/idea的git stash操作2.png"/>
 
 这样就可以将代码展示保存起来，那我们就可以切换到 master 分支之后新建一个 bug 分支来解决 bug
 
-<img alt="idea的git stash操作3" src="http://www.sylphy.me:9000/blog/idea的git stash操作3.png"/>
+<img alt="idea的git stash操作3" src="http://101.43.49.28:9000/blog/idea的git stash操作3.png"/>
 
 ​	切换到 bug 分支，修改完代码后，我们需要将修改的代码 commit 一下，之后我们再切换回 master 分支去到远程的 master 分支，之后我们将 bug 分支删除即可，之后在切换回我们本地的 dev 分支，之后我们选择 cherry-pick（优选）
 
-<img alt="idea的git stash操作4" src="http://www.sylphy.me:9000/blog/idea的git stash操作4.png"/>
+<img alt="idea的git stash操作4" src="http://101.43.49.28:9000/blog/idea的git stash操作4.png"/>
 
 这样，我们在 dev 分支上的 bug 也得到修复了，随后我们再选择 unstash（取消隐藏更改），来恢复我们刚刚的代码
 
-<img alt="idea的git stash操作5" src="http://www.sylphy.me:9000/blog/idea的git stash操作5.png"/>
+<img alt="idea的git stash操作5" src="http://101.43.49.28:9000/blog/idea的git stash操作5.png"/>
 
 将 Pop stash（消除隐藏）勾选上，将保存的记录内容恢复并且一并删除
 
@@ -749,11 +749,11 @@ git rebase <目标分支>
 
 ​	总结起来，**git rebase** 是一个强大的命令，可以重塑提交历史记录，使其更加线性和整洁。它在开发中经常用于合并分支、整理提交历史等操作。
 
-<img alt="未执行git rebase时" src="http://www.sylphy.me:9000/blog/未执行git rebase时.png"/>
+<img alt="未执行git rebase时" src="http://101.43.49.28:9000/blog/未执行git rebase时.png"/>
 
-<img alt="执行git rebase后" src="http://www.sylphy.me:9000/blog/执行git rebase后.png"/>
+<img alt="执行git rebase后" src="http://101.43.49.28:9000/blog/执行git rebase后.png"/>
 
-![变基前后的分支对比](http://www.sylphy.me:9000/blog/变基前后的分支对比.png)
+![变基前后的分支对比](http://101.43.49.28:9000/blog/变基前后的分支对比.png)
 
 ​	使用变基前后的对比，使用了变基可以让 Git 记录更加像一条直线，主要就是变换了基点，让分支的起点发生了变化，之后将新分支的变化复制到源分支上
 

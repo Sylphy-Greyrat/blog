@@ -30,7 +30,7 @@ icon: iconfont icon-rabbitmq
      - 性能下降
      - 级联失败问题
 
-   ![异步调用的展示](http://minio.sylphy.me/blog/异步调用的展示.png)
+   ![异步调用的展示](http://101.43.49.28:9000/blog/异步调用的展示.png)
 
 2. 异步调用
 
@@ -52,7 +52,7 @@ icon: iconfont icon-rabbitmq
    2. 消息代理：管理、缓存、转发消息，你可以把它理解成微信服务器
    3. 消息接收者：接收和处理消息的人，就是原来的服务提供方
 
-   ![异步调用的展示](http://minio.sylphy.me/blog/异步调用的展示.png)
+   ![异步调用的展示](http://101.43.49.28:9000/blog/异步调用的展示.png)
 
 ## 消息队列的相关技术
 
@@ -97,7 +97,7 @@ RabbitMQ 的整体架构及核心概率：
 
 每个虚拟主机相互独立，有各自的 exchange、queue
 
-![RabbitMQ 框架](http://minio.sylphy.me/blog/RabbitMQ框架.png)
+![RabbitMQ 框架](http://101.43.49.28:9000/blog/RabbitMQ框架.png)
 
 ### 收发消息
 
@@ -105,13 +105,13 @@ RabbitMQ 的整体架构及核心概率：
 
 打开 RabbitMQ 管理网页的 Exchanges 选项卡，可以看到已经有多个交换机了：
 
-![rabbitmq管理界面的Exchange选项卡](http://minio.sylphy.me/blog/rabbitmq管理界面的Exchange选项卡.png)
+![rabbitmq管理界面的Exchange选项卡](http://101.43.49.28:9000/blog/rabbitmq管理界面的Exchange选项卡.png)
 
 ​	点击任意交换机，即可进入交换机详情页面。（可利用控制台的 publish message 发送一天消息）：
 
-![exchanges的详情页](http://minio.sylphy.me/blog/exchanges的详情页.png)
+![exchanges的详情页](http://101.43.49.28:9000/blog/exchanges的详情页.png)
 
-![消息发送的具体操作](http://minio.sylphy.me/blog/消息发送的具体操作.png)
+![消息发送的具体操作](http://101.43.49.28:9000/blog/消息发送的具体操作.png)
 
 ​	这里是由控制台模拟了生产者发送的消息。由于没有消费者存在，最终消息丢失了，这样说明交换机没有存储消息的能力。
 
@@ -119,15 +119,15 @@ RabbitMQ 的整体架构及核心概率：
 
 打开 Queues 选项卡，新建一个队列：
 
-![rabbitmq管理界面的Queues选项卡](http://minio.sylphy.me/blog/rabbitmq管理界面的Queues选项卡.png)
+![rabbitmq管理界面的Queues选项卡](http://101.43.49.28:9000/blog/rabbitmq管理界面的Queues选项卡.png)
 
 命名为 hello.queue1：
 
-![创建hello.queue1队列的操作](http://minio.sylphy.me/blog/创建hello.queue1队列的操作.png)
+![创建hello.queue1队列的操作](http://101.43.49.28:9000/blog/创建hello.queue1队列的操作.png)
 
 再以相同的方式，创建一个队列，密码为 hello.queue2，最终队列列表如下：
 
-![队列列表](http://minio.sylphy.me/blog/队列列表.png)
+![队列列表](http://101.43.49.28:9000/blog/队列列表.png)
 
 ​	如果此时，我们再次向 amq.fanout 交换机发送一条消息。会发现消息依然会没有到达队列，原因是发送到交换机的消息，只会路由到与其绑定的队列，因此仅仅创建队列是不够的，我们还需要将其与交换机绑定。
 
@@ -135,29 +135,29 @@ RabbitMQ 的整体架构及核心概率：
 
 ​	点击 Exchanges 选项卡，点击 amq.fanout 交换机，进入交换机详情页，然后点击 Bindings 菜单，在表单中填写要绑定的队列名称：
 
-![绑定操作](http://minio.sylphy.me/blog/绑定操作.png)
+![绑定操作](http://101.43.49.28:9000/blog/绑定操作.png)
 
 相同的方式，将 hello.queue2 也绑定到改交换机。 最终，绑定结果如下：
 
-![绑定结果](http://minio.sylphy.me/blog/绑定结果.png)
+![绑定结果](http://101.43.49.28:9000/blog/绑定结果.png)
 
 #### 发送消息
 
 ​	再次回到 exchange 页面，找到刚刚绑定的 amq.fanout，点击进入详情页，再次发送一条消息：
 
-![消息发送的具体操作](http://minio.sylphy.me/blog/消息发送的具体操作.png)
+![消息发送的具体操作](http://101.43.49.28:9000/blog/消息发送的具体操作.png)
 
 回到 Queues 页面，可以发现 hello.queue 中已经有一条消息了：
 
-![消息结果](http://minio.sylphy.me/blog/消息结果.png)
+![消息结果](http://101.43.49.28:9000/blog/消息结果.png)
 
 点击队列名称，进入详情页，查看队列详情，这次我们点击 get message：
 
-![查看消息详情](http://minio.sylphy.me/blog/查看消息详情.png)
+![查看消息详情](http://101.43.49.28:9000/blog/查看消息详情.png)
 
 可以看到消息到达队列了：
 
-![消息内容](http://minio.sylphy.me/blog/消息内容.png)
+![消息内容](http://101.43.49.28:9000/blog/消息内容.png)
 
 ​	这个时候如果有消费者监听了 MQ 的 hello.queue1 或 hello.queue2 队列，自然就能接收到消息了。
 
@@ -167,7 +167,7 @@ RabbitMQ 的整体架构及核心概率：
 
 点击 Admin 选项卡，首先会看到 RabbitMQ 控制台的用户管理界面：
 
-![rabbitmq管理界面的Admin选项卡](http://minio.sylphy.me/blog/rabbitmq管理界面的Admin选项卡.png)
+![rabbitmq管理界面的Admin选项卡](http://101.43.49.28:9000/blog/rabbitmq管理界面的Admin选项卡.png)
 
 ​	这里的用户都是 RabbitMQ 的管理或运维人员。目前只有安装 RabbitMQ 时添加的 itheima 这个用户。仔细观察用户表格中的字段，如下：
 
@@ -182,37 +182,37 @@ RabbitMQ 的整体架构及核心概率：
 
 比如，现在我们创建一个新的用户，命名为 hmall：
 
-![创建用户](http://minio.sylphy.me/blog/创建用户.png)
+![创建用户](http://101.43.49.28:9000/blog/创建用户.png)
 
 发现 hmall 用户此时没有任何 virtual host 的访问权限：
 
-![hmall 用户的 virtualhost 访问权限](http://minio.sylphy.me/blog/hmall用户的virtualhost访问权限1.png)
+![hmall 用户的 virtualhost 访问权限](http://101.43.49.28:9000/blog/hmall用户的virtualhost访问权限1.png)
 
 #### virtual host
 
 先登出用户：
 
-![登出用户](http://minio.sylphy.me/blog/登出用户.png)
+![登出用户](http://101.43.49.28:9000/blog/登出用户.png)
 
 ​	切换到刚刚创建的 hmall 用户登录，然后点击 Virtual Hosts 菜单，进入 virtual host 管理页：
 
-![virtual host 管理页](http://minio.sylphy.me/blog/virtualhost管理页1.png)
+![virtual host 管理页](http://101.43.49.28:9000/blog/virtualhost管理页1.png)
 
 ​	可以看到目前只有一个默认的 virtual host ，名字为 /。 我们可以给黑马商城项目创建一个单独的 virtual host ，而不是使用默认的 /。
 
-![创建 virtual host](http://minio.sylphy.me/blog/创建virtualhost.png)
+![创建 virtual host](http://101.43.49.28:9000/blog/创建virtualhost.png)
 
 创建完成后如图：
 
-![virtual host 管理页](http://minio.sylphy.me/blog/virtualhost管理页2.png)
+![virtual host 管理页](http://101.43.49.28:9000/blog/virtualhost管理页2.png)
 
 ​	由于我们是登录 hmall 账户后创建的 virtual host，因此回到 users 菜单，你会发现当前用户已经具备了对 /hmall 这个 virtual host 的访问权限了：
 
-![hmall 用户的 virtualhost 访问权限](http://minio.sylphy.me/blog/hmall用户的virtualhost访问权限2.png)
+![hmall 用户的 virtualhost 访问权限](http://101.43.49.28:9000/blog/hmall用户的virtualhost访问权限2.png)
 
 此时，点击页面右上角的 virtual host 下拉菜单，切换 virtual host 为  /hmall：
 
-![切换 virtual host](http://minio.sylphy.me/blog/切换virtualhost.png)
+![切换 virtual host](http://101.43.49.28:9000/blog/切换virtualhost.png)
 
 ​	然后再次查看 queues 选项卡，会发现之前的队列已经看不到了： 这就是基于 virtual host 的隔离效果。
 
@@ -244,7 +244,7 @@ SpringAMQP 提供了三个功能：
 
 ​	在之前的案例中，我们都是经过交换机发送消息到队列，不过有时候为了测试方便，我们也**可以直接向队列发送消息，跳过交换机**。
 
-![跳过交换机的消息流程](http://minio.sylphy.me/blog/跳过交换机的消息流程.png)
+![跳过交换机的消息流程](http://101.43.49.28:9000/blog/跳过交换机的消息流程.png)
 
 - publisher 直接发送消息到队列
 - 消费者监听并处理队列中的消息
@@ -253,9 +253,9 @@ SpringAMQP 提供了三个功能：
 
 为了方便测试，我们现在控制台新建一个队列：simple.queue
 
-![](http://minio.sylphy.me/blog/新建simple.queue队列1.png)
+![](http://101.43.49.28:9000/blog/新建simple.queue队列1.png)
 
-![新建 simple.queue 队列](http://minio.sylphy.me/blog/新建simple.queue队列2.png)
+![新建 simple.queue 队列](http://101.43.49.28:9000/blog/新建simple.queue队列2.png)
 
 #### 消息发送
 
@@ -290,7 +290,7 @@ public void testSimpleQueue() {
 
 打开控制台，可以看到消息已经发送到队列中：
 
-![消息传到队列中](http://minio.sylphy.me/blog/消息传到队列中.png)
+![消息传到队列中](http://101.43.49.28:9000/blog/消息传到队列中.png)
 
 接下来，我们再来实现消息接收。
 
@@ -325,19 +325,19 @@ public class SpringRabbitListener {
 
 运行结果：
 
-![运行结果](http://minio.sylphy.me/blog/运行结果1.png)
+![运行结果](http://101.43.49.28:9000/blog/运行结果1.png)
 
 ### WorkQueues 模型
 
 ​	Work queues，任务模型。简单来说就是**让多个消费者绑定到一个队列，共同消费队列中的消息**。
 
-![Work Queues 模型的消息流程](http://minio.sylphy.me/blog/WorkQueues模型的消息流程.png)
+![Work Queues 模型的消息流程](http://101.43.49.28:9000/blog/WorkQueues模型的消息流程.png)
 
 ​	当消息处理比较耗时的时候，可能生产消息的速度会远远大于消息的消费速度。长此以往，消息就会堆积越来越多，无法及时处理。 此时就可以使用 work 模型，**多个消费者共同处理消息处理，消息处理的速度就能大大提高了**。
 
 接下来，我们就来模拟这样的场景。 首先，我们在控制台创建一个新的队列，命名为 work.queue：
 
-![新建 work.queue 队列](http://minio.sylphy.me/blog/新建work.queue队列.png)
+![新建 work.queue 队列](http://101.43.49.28:9000/blog/新建work.queue队列.png)
 
 #### 消息发送
 
@@ -420,7 +420,7 @@ spring:
 
 ​	在之前的两个测试案例中，都没有交换机，生产者直接发送消息到队列。而一旦引入交换机，消息发送的模式会有很大变化：
 
-![包含交换机的消息流程](http://minio.sylphy.me/blog/包含交换机的消息流程.png)
+![包含交换机的消息流程](http://101.43.49.28:9000/blog/包含交换机的消息流程.png)
 
 可以看到，在订阅模型中，多了一个 exchange 角色，而且过程略有变化：
 
@@ -442,7 +442,7 @@ spring:
 
 ​	Fanout，英文翻译是扇出，我觉得在 MQ 中叫广播更合适。 在广播模式下，消息发送流程是这样的：
 
-![Fanout 交换机的消息流程](http://minio.sylphy.me/blog/Fanout交换机的消息流程.png)
+![Fanout 交换机的消息流程](http://101.43.49.28:9000/blog/Fanout交换机的消息流程.png)
 
 Fanout 交换机需求如下：
 
@@ -456,21 +456,21 @@ Fanout 交换机需求如下：
 
 在控制台创建队列 fanout.queue1:
 
-![创建 fanout.queue1 队列](http://minio.sylphy.me/blog/创建fanout.queue1队列.png)
+![创建 fanout.queue1 队列](http://101.43.49.28:9000/blog/创建fanout.queue1队列.png)
 
 在控制台创建队列 fanout.queue2:
 
-![创建 fanout.queue2 队列](http://minio.sylphy.me/blog/创建fanout.queue2队列.png)
+![创建 fanout.queue2 队列](http://101.43.49.28:9000/blog/创建fanout.queue2队列.png)
 
 然后再创建一个交换机：
 
-![创建 hmall.fanout 交换机](http://minio.sylphy.me/blog/创建hmall.fanout交换机.png)
+![创建 hmall.fanout 交换机](http://101.43.49.28:9000/blog/创建hmall.fanout交换机.png)
 
 然后绑定两个队列到交换机：
 
-![fanout.queue1绑定到hmall.fanout](http://minio.sylphy.me/blog/fanout.queue1_bind_hmall.fanout.png)
+![fanout.queue1绑定到hmall.fanout](http://101.43.49.28:9000/blog/fanout.queue1_bind_hmall.fanout.png)
 
-![fanout.queue2绑定到hmall.fanout](http://minio.sylphy.me/blog/fanout.queue2_bind_hmall.fanout.png)
+![fanout.queue2绑定到hmall.fanout](http://101.43.49.28:9000/blog/fanout.queue2_bind_hmall.fanout.png)
 
 ##### 消息发送
 
@@ -516,7 +516,7 @@ public void listenFanoutQueue2(String msg) {
 
 ​	在 Fanout 模式中，一条消息，会被所有订阅的队列都消费。但是，在某些场景下，我们希望不同的消息被不同的队列消费。这时就要用到 Direct 类型的 Exchange。
 
-![Direct 交换机的消息流程](http://minio.sylphy.me/blog/Direct交换机的消息流程.png)
+![Direct 交换机的消息流程](http://101.43.49.28:9000/blog/Direct交换机的消息流程.png)
 
 在Direct模型下：
 
@@ -536,21 +536,21 @@ Direct 交换机需求如下：
 
 首先在控制台声明两个队列 direct.queue1 和 direct.queue2，这里不再展示过程：
 
-![创建direct.queue1和direct.queue2两个队列](http://minio.sylphy.me/blog/创建direct.queue1和direct.queue2两个队列.png)
+![创建direct.queue1和direct.queue2两个队列](http://101.43.49.28:9000/blog/创建direct.queue1和direct.queue2两个队列.png)
 
 然后声明一个direct类型的交换机，命名为 hmall.direct：
 
-![创建hmall.direct交换机](http://minio.sylphy.me/blog/创建hmall.direct交换机.png)
+![创建hmall.direct交换机](http://101.43.49.28:9000/blog/创建hmall.direct交换机.png)
 
 然后使用 red 和 blue 作为 key，绑定 direct.queue1 到 hmall.direct：
 
-![direct.queue1 绑定 hmall.direct 用 red 做 key](http://minio.sylphy.me/blog/direct.queue1绑定hmall.direct用red做key.png)
+![direct.queue1 绑定 hmall.direct 用 red 做 key](http://101.43.49.28:9000/blog/direct.queue1绑定hmall.direct用red做key.png)
 
-![direct.queue1绑定hmall.direct用blue做key](http://minio.sylphy.me/blog/direct.queue1绑定hmall.direct用blue做key.png)
+![direct.queue1绑定hmall.direct用blue做key](http://101.43.49.28:9000/blog/direct.queue1绑定hmall.direct用blue做key.png)
 
 ​	同理，使用 red 和 yellow 作为 key，绑定 direct.queue2 到 hmall.direct，步骤略，最终结果：
 
-![hmall.direct 的绑定情况](http://minio.sylphy.me/blog/hmall.direct的绑定情况.png)
+![hmall.direct 的绑定情况](http://101.43.49.28:9000/blog/hmall.direct的绑定情况.png)
 
 ##### 消息接收
 
@@ -586,7 +586,7 @@ public void testSendDirectExchange() {
 
 由于使用的 red 这个 key，所以两个消费者都收到了消息：
 
-![发送 key 为 red 的消息的运行结果](http://minio.sylphy.me/blog/发送key为red的消息的运行结果.png)
+![发送 key 为 red 的消息的运行结果](http://101.43.49.28:9000/blog/发送key为red的消息的运行结果.png)
 
 我们再切换为 blue 这个 key：
 
@@ -604,7 +604,7 @@ public void testSendDirectExchange() {
 
 结果会只有消费者1收到了消息
 
-![发送key为blue的消息的运行结果](http://minio.sylphy.me/blog/发送key为blue的消息的运行结果.png)
+![发送key为blue的消息的运行结果](http://101.43.49.28:9000/blog/发送key为blue的消息的运行结果.png)
 
 ##### 总结
 
@@ -632,15 +632,15 @@ BindingKey 一般都是有一个或多个**单词**组成，多个单词之间�
 >- `item.#`：能够匹配`item.spu.insert` 或者 `item.spu`
 >- `item.*`：只能匹配`item.spu`
 
-![Topic 交换机的消息流程](http://minio.sylphy.me/blog/Topic交换机的消息流程.png)
+![Topic 交换机的消息流程](http://101.43.49.28:9000/blog/Topic交换机的消息流程.png)
 
-![Topic 交换机的例子](http://minio.sylphy.me/blog/Topic交换机的例子.png)
+![Topic 交换机的例子](http://101.43.49.28:9000/blog/Topic交换机的例子.png)
 
 ##### 声明队列和交换机
 
 ​	首先，在控制台按照图示例子创建队列、交换机，并利用通配符绑定队列和交换机。此处步骤略。最终结果如下：
 
-![hmall.topic 的绑定情况](http://minio.sylphy.me/blog/hmall.topic的绑定情况.png)
+![hmall.topic 的绑定情况](http://101.43.49.28:9000/blog/hmall.topic的绑定情况.png)
 
 ##### 消息发送
 
@@ -694,25 +694,25 @@ Direct 交换机与 Topic 交换机的差异：
 
 SpringAMQP 提供了一个 Queue 类，用来创建队列：
 
-![Queue 类](http://minio.sylphy.me/blog/Queue类.png)
+![Queue 类](http://101.43.49.28:9000/blog/Queue类.png)
 
 SpringAMQP 还提供了一个 Exchange 接口，来表示所有不同类型的交换机：
 
-![Exchange 接口及其子类](http://minio.sylphy.me/blog/Exchange接口及其子类.png)
+![Exchange 接口及其子类](http://101.43.49.28:9000/blog/Exchange接口及其子类.png)
 
 ​	我们可以自己创建队列和交换机，不过 SpringAMQP 还提供了 <font color='red'>**ExchangeBuilder**</font>来简化这个过程： 
 
-![ExchangeBuilder 的结构](http://minio.sylphy.me/blog/ExchangeBuilder的结构.png)
+![ExchangeBuilder 的结构](http://101.43.49.28:9000/blog/ExchangeBuilder的结构.png)
 
 而在绑定队列和交换机时，则需要使用BindingBuilder来创建Binding对象：
 
-![BindingBuilder 的结构](http://minio.sylphy.me/blog/BindingBuilder的结构.png)
+![BindingBuilder 的结构](http://101.43.49.28:9000/blog/BindingBuilder的结构.png)
 
 #### fanout 示例
 
 在 consumer 中创建一个**配置类**，声明队列和交换机：
 
-![Fanout 交换机的消息流程](http://minio.sylphy.me/blog/Fanout交换机的消息流程.png)
+![Fanout 交换机的消息流程](http://101.43.49.28:9000/blog/Fanout交换机的消息流程.png)
 
 ~~~java
 @Configuration
@@ -764,7 +764,7 @@ public class FanoutConfig {
 
 direct 模式由于要绑定多个 KEY，会非常麻烦，每一个 Key 都要编写一个 binding：
 
-![Direct 交换机的消息流程](http://minio.sylphy.me/blog/Direct交换机的消息流程.png)
+![Direct 交换机的消息流程](http://101.43.49.28:9000/blog/Direct交换机的消息流程.png)
 
 ~~~java
 @Configuration
@@ -881,7 +881,7 @@ public void listenTopicQueue2(String msg){
 
 Spring 的消息发送代码接收的消息体是一个 **Object**：
 
-![convertAndSend 方法](http://minio.sylphy.me/blog/convertAndSend方法.png)
+![convertAndSend 方法](http://101.43.49.28:9000/blog/convertAndSend方法.png)
 
 ​	而在数据传输时，它会把你发送的消息序列化为字节发送给 MQ，接收消息的时候，还会把字节反序列化为 Java 对象。 只不过，默认情况下 Spring 采用的序列化方式是<font color='red'>**JDK序列化**</font>。众所周知，JDK 序列化存在下列问题：
 
@@ -922,7 +922,7 @@ public MessageConverter messageConverter(){
 
 此时，我们到 MQ 控制台**删除** object.queue 中的旧的消息。然后再次执行刚才的消息发送的代码，到 MQ 的控制台查看消息结构：
 
-![收到的消息的消息结构](http://minio.sylphy.me/blog/收到的消息的消息结构.png)
+![收到的消息的消息结构](http://101.43.49.28:9000/blog/收到的消息的消息结构.png)
 
 #### 消费者接收 Object
 
@@ -943,7 +943,7 @@ public void listenSimpleQueueMessage(Map<String, Object> msg) throws Interrupted
 
 ​	首先，我们一起分析一下消息丢失的可能性有哪些。 消息从发送者发送消息，到消费者处理消息，需要经过的流程是这样的：
 
-![消息推送流程](http://minio.sylphy.me/blog/消息推送流程.png)
+![消息推送流程](http://101.43.49.28:9000/blog/消息推送流程.png)
 
 消息从生产者到消费者的每一步都可能导致消息丢失：
 
@@ -1006,7 +1006,7 @@ spring:
 
 ​	针对上述情况，RabbitMQ 提供了生产者消息确认机制，包括 <u>**Publisher Confirm**</u> 和 <u>**Publisher Return**</u> 两种。在开启确认机制的情况下，当生产者发送消息给 MQ 后，MQ 会根据消息处理的情况返回不同的**回执**。 具体如图所示：
 
-![消息处理返回的不同情况](http://minio.sylphy.me/blog/消息处理返回的不同情况.png)
+![消息处理返回的不同情况](http://101.43.49.28:9000/blog/消息处理返回的不同情况.png)
 
 - 当消息投递到 MQ，但是路由失败时，通过 **Publisher Return** 返回异常信息，同时返回 ack 的确认信息，代表投递成功**（失败了还会返回 ack 是因为确认机制只能保证该消息是否到达 MQ，不管他是否被消费）**
 - 临时消息投递到了 MQ，并且入队成功，返回 ACK，告知投递成功
@@ -1048,7 +1048,7 @@ publisher-confirm-type 有三种模式：
 
 ​	**每个 RabbitTemplate 只能配置一个 ReturnCallback**，因此我们可以在配置类中统一设置。我们在 publisher 模块定义一个配置类：
 
-![publichser 模块结构](http://minio.sylphy.me/blog/publichser模块结构.png)
+![publichser 模块结构](http://101.43.49.28:9000/blog/publichser模块结构.png)
 
 ~~~java
 @Slf4j
@@ -1091,7 +1091,7 @@ public void sendMessage(String exchange, String routingKey, Object message) {
 
 ​	由于每个消息发送时的处理逻辑不一定相同，因此 ConfirmCallback 需要在每次发消息时定义。具体来说，是在调用 RabbitTemplate 中的 convertAndSend 方法时，多传递一个参数：
 
-![convertAndSend 的多种构造](http://minio.sylphy.me/blog/convertAndSend的多种构造.png)
+![convertAndSend 的多种构造](http://101.43.49.28:9000/blog/convertAndSend的多种构造.png)
 
 这里的 CorrelationData 中包含两个核心的东西：
 
@@ -1100,7 +1100,7 @@ public void sendMessage(String exchange, String routingKey, Object message) {
 
 ​	将来 MQ 的回执就会通过这个 Future 来返回，我们可以提前给 CorrelationData 中的 Future 添加回调函数来处理消息回执：
 
-![SettableListenableFuture 类](http://minio.sylphy.me/blog/SettableListenableFuture类.png)
+![SettableListenableFuture 类](http://101.43.49.28:9000/blog/SettableListenableFuture类.png)
 
 向系统自带的交换机发送消息，并且添加 ConfirmCallback：
 
@@ -1133,7 +1133,7 @@ void testPublisherConfirm() {
 
 运行结果如下：
 
-![添加 ConfirmCallback 的运行结果](http://minio.sylphy.me/blog/添加ConfirmCallback的运行结果.png)
+![添加 ConfirmCallback 的运行结果](http://101.43.49.28:9000/blog/添加ConfirmCallback的运行结果.png)
 
 ​	可以看到，由于传递的 RoutingKey 是错误的，路由失败后，触发了 return callback，同时也收到了 ack。 当我们修改为正确的 RoutingKey 以后，就不会触发 return callback 了，只收到 ack。 而如果连交换机都是错误的，则只会收到 nack。
 
@@ -1147,7 +1147,7 @@ void testPublisherConfirm() {
 
 ​	confirm 模式最大的好处在于是异步的，一旦发布一条消息，生产者应用程序就可以在等信道返回确认的同时继续发送下一条消息，当消息最终得到确认之后，生产者应用便可以通过回调方法来处理该确认消息，如果 RabbitMQ 因为自身内部错误导致消息丢失，就会发送一条 nack 消息， 生产者应用程序同样可以在回调方法中处理该 nack 消息。
 
-![comfirm 模式的流程](http://minio.sylphy.me/blog/comfirm模式的流程.png)
+![comfirm 模式的流程](http://101.43.49.28:9000/blog/comfirm模式的流程.png)
 
 细节：
 
@@ -1155,7 +1155,7 @@ void testPublisherConfirm() {
 
 deliveryTag（一条消息的标记号）的初始值也是0L,但是标记发送的消息是从1开始的，1-65535，这样 getNextPublishSeqNo()（下一条消息的标记号）的值和 deliveryTag 的值就是对应的
 
-![confirm 模式细节处理](http://minio.sylphy.me/blog/confirm模式细节处理.png)
+![confirm 模式细节处理](http://101.43.49.28:9000/blog/confirm模式细节处理.png)
 
 ## MQ 的可靠性
 
@@ -1175,7 +1175,7 @@ deliveryTag（一条消息的标记号）的初始值也是0L,但是标记发送
 
 在控制台的 Exchanges 页面，添加交换机时可以配置交换机的 Durability 参数：
 
-![Exchanges 配置 Druability 参数](http://minio.sylphy.me/blog/Exchanges配置Druability参数.png)
+![Exchanges 配置 Druability 参数](http://101.43.49.28:9000/blog/Exchanges配置Druability参数.png)
 
 设置为 Durable 就是持久化模式，Transient 就是临时模式。
 
@@ -1183,7 +1183,7 @@ deliveryTag（一条消息的标记号）的初始值也是0L,但是标记发送
 
 在控制台的 Queues 页面，添加队列时，同样可以配置队列的 Durability 参数：
 
-![Queues 配置 Druability 参数](http://minio.sylphy.me/blog/Queues配置Druability参数.png)
+![Queues 配置 Druability 参数](http://101.43.49.28:9000/blog/Queues配置Druability参数.png)
 
 除了持久化以外，你可以看到队列还有很多其它参数。
 
@@ -1197,7 +1197,7 @@ deliveryTag（一条消息的标记号）的初始值也是0L,但是标记发送
 
 ​	在控制台发送消息的时候，可以添加很多参数，而消息的持久化是要配置一个 properties：
 
-![消息持久化配置](http://minio.sylphy.me/blog/消息持久化配置.png)
+![消息持久化配置](http://101.43.49.28:9000/blog/消息持久化配置.png)
 
 说明：在开启持久化机制以后，如果同时还开启了生产者确认，那么 MQ 会在消息持久化以后才发送 ACK 回执，进一步确保消息的可靠性。 不过出于性能考虑，为了减少 IO 次数，发送到 MQ 的消息并不是逐条持久化到数据库的，而是每隔一段时间批量持久化。一般间隔在100毫秒左右，这就会导致 ACK 有一定的延迟，因此建议生产者确认全部采用异步方式。
 
@@ -1205,7 +1205,7 @@ deliveryTag（一条消息的标记号）的初始值也是0L,但是标记发送
 
 ​	持久化消息会同时写入***磁盘*** 和***内存***（加快读取速度），非持久化消息会暂存在内存中，只有***当内存不够用*** 时，才将消息**写入磁盘**（但一般重启之后，在磁盘中的非持久化消息就没有了）。
 
-![](http://minio.sylphy.me/blog/写进磁盘的非持久化消息.png)
+![](http://101.43.49.28:9000/blog/写进磁盘的非持久化消息.png)
 
 ​	<font color='red'>**消息持久化这个方法并不能保证消息100%不丢失**</font>，如果在当消息刚准备存储在磁盘的时候 但是还没有存储完，消息还在缓存的一个间隔点。此时并没有真正写入磁盘。如果一旦服务崩溃宕机，消息还是会丢失。
 
@@ -1233,7 +1233,7 @@ deliveryTag（一条消息的标记号）的初始值也是0L,但是标记发送
 
 在添加队列的时候，添加 x-queue-mod=lazy 参数即可设置队列为 Lazy 模式：
 
-![Queues 配置 Lazy 模式](http://minio.sylphy.me/blog/Queues配置Lazy模式.png)
+![Queues 配置 Lazy 模式](http://101.43.49.28:9000/blog/Queues配置Lazy模式.png)
 
 #### 代码配置 Lazy 模式
 
@@ -1251,7 +1251,7 @@ public Queue lazyQueue(){
 
 这里是通过 QueueBuilder 的 lazy() 函数配置 Lazy 模式，底层源码如下：
 
-![lazy() 源码](http://minio.sylphy.me/blog/lazy()源码.png)
+![lazy() 源码](http://101.43.49.28:9000/blog/lazy()源码.png)
 
 当然，我们也可以基于注解来声明队列并设置为 Lazy 模式：
 
@@ -1285,7 +1285,7 @@ rabbitmqctl set_policy Lazy "^lazy-queue$" '{"queue-mode":"lazy"}' --apply-to qu
 
 当然，也可以在控制台配置 policy，进入在控制台的 Admin 页面，点击 Policies，即可添加配置：
 
-![Admin 页面配置全部队列为 Lazy](http://minio.sylphy.me/blog/Admin页面配置全部队列为Lazy.png)
+![Admin 页面配置全部队列为 Lazy](http://101.43.49.28:9000/blog/Admin页面配置全部队列为Lazy.png)
 
 ## 惰性队列 VS 持久化队列
 
@@ -1384,11 +1384,11 @@ spring:
 
 ​	在异常位置打断点，再次发送消息，程序卡在断点时，可以发现此时消息状态为 unacked（未确定状态）：
 
-![队列显示 unacked(未确定状态)](http://minio.sylphy.me/blog/队列显示unacked(未确定状态).png)
+![队列显示 unacked(未确定状态)](http://101.43.49.28:9000/blog/队列显示unacked(未确定状态).png)
 
 ​	放行以后，由于抛出的是**消息转换异常**，因此 Spring 会自动返回 reject，所以消息依然会被删除：
 
-![队列消息被删除](http://minio.sylphy.me/blog/队列消息被删除.png)
+![队列消息被删除](http://101.43.49.28:9000/blog/队列消息被删除.png)
 
 我们将异常改为**RuntimeException**类型：
 
@@ -1405,11 +1405,11 @@ public void listenSimpleQueueMessage(String msg) throws InterruptedException {
 
 ​	在异常位置打断点，然后再次发送消息测试，程序卡在断点时，可以发现此时消息状态为 unacked（未确定状态）：
 
-![队列显示 unacked(未确定状态)](http://minio.sylphy.me/blog/队列显示unacked(未确定状态).png)
+![队列显示 unacked(未确定状态)](http://101.43.49.28:9000/blog/队列显示unacked(未确定状态).png)
 
 ​	放行以后，由于抛出的是业务异常，所以 Spring 返回 ack，最终消息恢复至 Ready 状态，并且没有被 RabbitMQ 删除：
 
-![消息恢复至 Ready 状态](http://minio.sylphy.me/blog/消息恢复至Ready状态.png)
+![消息恢复至 Ready 状态](http://101.43.49.28:9000/blog/消息恢复至Ready状态.png)
 
 ​	当我们把配置改为 auto 时，消息处理失败后，会回到 RabbitMQ，并重新投递到消费者。
 
@@ -1642,7 +1642,7 @@ UPDATE `order` SET status = ? , pay_time = ? WHERE id = ? AND status = 1
 
 其实思想很简单：既然 MQ 通知不一定发送到交易服务，那么交易服务就必须自己**主动去查询**支付状态。这样即便支付服务的 MQ 通知失败，我们依然能通过主动查询来保证订单状态的一致。 流程如下：
 
-![兜底方案的流程](http://minio.sylphy.me/blog/兜底方案的流程.png)
+![兜底方案的流程](http://101.43.49.28:9000/blog/兜底方案的流程.png)
 
 ​	图中黄色线圈起来的部分就是 MQ 通知失败后的兜底处理方案，由交易服务自己主动去查询支付状态。
 
@@ -1686,7 +1686,7 @@ UPDATE `order` SET status = ? , pay_time = ? WHERE id = ? AND status = 1
 
 ​	当我们为某一个交换机声明一个对应的备份交换机时，就是为它创建一个备胎，当交换机接收到一条不可路由消息时，将会把这条消息转发到备份交换机中，由备份交换机来进行转发和处理，通常备份交换机的类型为 Fanout ，这样就能把所有消息都投递到与其绑定的队列中，然后我们在备份交换机下绑定一个队列，这样所有那些原交换机无法被路由的消息，就会都进入这个队列了。当然，我们还可以建立一个报警队列，用独立的消费者来进行监测和报警。
 
-![备份交换机的原理步骤](http://minio.sylphy.me/blog/备份交换机的原理步骤.png)
+![备份交换机的原理步骤](http://101.43.49.28:9000/blog/备份交换机的原理步骤.png)
 
 ​	当 RabbitMQ 发现一个消息无法被投递到目标队列时，它会将该消息发送到备份交换机。备份交换机是一种特殊的交换机，可以通过配置让 RabbitMQ 发送无法被路由的消息到指定的备份交换机。
 
@@ -1737,25 +1737,25 @@ UPDATE `order` SET status = ? , pay_time = ? WHERE id = ? AND status = 1
 
 ​	而最后一种场景，大家设想一下这样的场景： **如图，有一组绑定的交换机（ttl.fanout）和队列（ttl.queue）。但是ttl.queue没有消费者监听，而是设定了死信交换机 hmall.direct，而队列 direct.queue1 则与死信交换机绑定，RoutingKey 是 blue：**
 
-![](http://minio.sylphy.me/blog/延迟消息流程1.png)
+![](http://101.43.49.28:9000/blog/延迟消息流程1.png)
 
 ​	假如我们现在发送一条消息到 ttl.fanout，RoutingKey为blue，并设置消息的**有效期**为5000毫秒：
 
-![](http://minio.sylphy.me/blog/延迟消息流程2.png)
+![](http://101.43.49.28:9000/blog/延迟消息流程2.png)
 
 注意：尽管这里的 ttl.fanout 不需要 RoutingKey，但是当消息变为死信并投递到死信交换机时，会沿用之前的 RoutingKey，这样 hmall.direct 才能正确路由消息。
 
 ​	消息肯定会被投递到 ttl.queue 之后，由于没有消费者，因此消息无人消费。5秒之后，消息的有效期到期，成为死信：
 
-![](http://minio.sylphy.me/blog/延迟消息流程3.png)
+![](http://101.43.49.28:9000/blog/延迟消息流程3.png)
 
 死信被再次投递到死信交换机 hmall.direct，并沿用之前的 RoutingKey，也就是 blue：
 
-![](http://minio.sylphy.me/blog/延迟消息流程4.png)
+![](http://101.43.49.28:9000/blog/延迟消息流程4.png)
 
 ​	由于 direct.queue1 与 hmall.direct 绑定的 key 是 blue，因此最终消息被成功路由到 direct.queue1，如果此时有消费者与 direct.queue1 绑定， 也就能成功消费消息了。但此时已经是5秒钟以后了：
 
-![](http://minio.sylphy.me/blog/延迟消息流程5.png)
+![](http://101.43.49.28:9000/blog/延迟消息流程5.png)
 
 ​	也就是说，publisher 发送了一条消息，但最终 consumer 在5秒后才收到消息。我们成功实现了**延迟消息**。  
 
@@ -1867,7 +1867,7 @@ void testPublisherDelayMessage() {
 
 设置队列的最大优先值，最大可以设置到255，官网推荐 1-10 如果设置太高比较吃内存和 CPU
 
-![设置代码](http://minio.sylphy.me/blog/设置代码.png)
+![设置代码](http://101.43.49.28:9000/blog/设置代码.png)
 
 ::: info 注意事项
 
@@ -1885,13 +1885,13 @@ void testPublisherDelayMessage() {
 
 交易服务中利用延迟消息实现订单支付状态的同步。其大概思路如下：
 
-![订单状态同步思路](http://minio.sylphy.me/blog/订单状态同步思路.png)
+![订单状态同步思路](http://101.43.49.28:9000/blog/订单状态同步思路.png)
 
 ​	假如订单超时支付时间为30分钟，理论上说我们应该在下单时发送一条延迟消息，延迟时间为30分钟。这样就可以在接收到消息时检验订单支付状态，关闭未支付订单。 但是大多数情况下用户支付都会在1分钟内完成，我们发送的消息却要在 MQ 中停留30分钟，额外消耗了 MQ 的资源。因此，我们最好多检测几次订单支付状态，而不是在最后第30分钟才检测。 例如：我们在用户下单后的第10秒、20秒、30秒、45秒、60秒、1分30秒、2分、...30分分别设置延迟消息，如果提前发现订单已经支付，则后续的检测取消即可。 这样就可以有效避免对 MQ 资源的浪费了。
 
 **优化后的实现思路如下：**
 
-![优化后的订单状态同步思路](http://minio.sylphy.me/blog/优化后的订单状态同步思路.png)
+![优化后的订单状态同步思路](http://101.43.49.28:9000/blog/优化后的订单状态同步思路.png)
 
 ​	由于我们要多次发送延迟消息，因此需要先定义一个记录消息延迟时间的消息体：
 
@@ -1965,7 +1965,7 @@ spring:
 
 在需要的模块下添加共享配置：
 
-![nacos 共享配置 rabbitmq](http://minio.sylphy.me/blog/nacos共享配置rabbitmq.png)
+![nacos 共享配置 rabbitmq](http://101.43.49.28:9000/blog/nacos共享配置rabbitmq.png)
 
 ### 下单业务
 
