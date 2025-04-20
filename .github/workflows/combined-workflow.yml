@@ -1,0 +1,119 @@
+name: AutoDeploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      choice:
+        description: '选择要执行的流程'
+        required: true
+        default: 'A'
+        type: choice
+        options:
+          - A
+          - B
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - LICENSE
+      - README.md
+
+jobs:
+  build-and-deploy-github:
+    if: ${{ inputs.choice == 'A' }}
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: Node环境
+        uses: actions/setup-node@v2
+        with:
+          node-version: 22.9.0
+
+      - uses: pnpm/action-setup@v2
+        name: 安装pnpm
+        with:
+          version: 9.12.1
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: 缓存pnpm依赖
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 安装依赖
+        if: steps.cache-hit.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      - name: 打包构建
+        run: pnpm run docs:build
+
+      - name: 部署到Page分支
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src/.vuepress/dist
+          publish_branch: gh-pages
+          force_orphan: true  # 保持page分支历史干净
+  build-and-deploy-server:
+    if: ${{ inputs.choice == 'B' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: Node环境
+        uses: actions/setup-node@v2
+        with:
+          node-version: 22.9.0
+
+      - uses: pnpm/action-setup@v2
+        name: 安装pnpm
+        id: pnpm-install
+        with:
+          version: 9.12.1
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 安装依赖
+        if: steps.cache-hit.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      - name: 打包构建
+        run: pnpm run build
+
+      - name: 部署
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.USER_HOST }}
+          username: ${{ secrets.USER_NAME }}
+          key: ${{ secrets.KEY }}
+          source: './src/.vuepress/dist'
+          target: ${{ secrets.USER_TARGET }}
+          rm: true
