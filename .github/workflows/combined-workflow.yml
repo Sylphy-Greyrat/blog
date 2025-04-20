@@ -1,7 +1,8 @@
-name: AutoDeploy
+name: Controlled Deploy
 
 env:
-  CHOICE: 'A'
+  # 默认部署目标（可被覆盖）
+  DEPLOY_TARGET: 'pages' # 可选值: pages / server / both
 
 on:
   push:
@@ -12,12 +13,8 @@ on:
       - README.md
 
 jobs:
-  build-and-deploy-github:
-    if: ${{ env.CHOICE == 'A' }}
-    permissions:
-      contents: write
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: 检出代码
         uses: actions/checkout@v3
@@ -26,34 +23,48 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 22.9.0
+          cache: 'pnpm'
 
-      - uses: pnpm/action-setup@v2
-        name: 安装pnpm
+      - name: 安装pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 9.12.1
           run_install: false
 
-      - name: Get pnpm store directory
+      - name: 获取pnpm仓库路径
         id: pnpm-cache
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v3
-        name: 缓存pnpm依赖
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
       - name: 安装依赖
-        if: steps.cache-hit.outputs.cache-hit != 'true'
+        if: steps.cache-deps.outputs.cache-hit != 'true'
         run: pnpm install
 
       - name: 打包构建
         run: pnpm run docs:build
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: src/.vuepress/dist
+
+      - name: 缓存pnpm依赖
+        uses: actions/cache@v3
+        id: cache-deps
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+  deploy-pages:
+    needs: build
+    if: ${{ env.DEPLOY_TARGET == 'pages' || env.DEPLOY_TARGET == 'both' }}
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
       - name: 部署到Page分支
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -61,52 +72,16 @@ jobs:
           publish_dir: ./src/.vuepress/dist
           publish_branch: gh-pages
           force_orphan: true  # 保持page分支历史干净
-  build-and-deploy-server:
-    if: ${{ env.CHOICE == 'B' }}
+
+  deploy-server:
+    needs: build
+    if: ${{ env.DEPLOY_TARGET == 'server' || env.DEPLOY_TARGET == 'both' }}
     runs-on: ubuntu-latest
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v3
-
-      - name: Node环境
-        uses: actions/setup-node@v2
-        with:
-          node-version: 22.9.0
-
-      - uses: pnpm/action-setup@v2
-        name: 安装pnpm
-        id: pnpm-install
-        with:
-          version: 9.12.1
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: 安装依赖
-        if: steps.cache-hit.outputs.cache-hit != 'true'
-        run: pnpm install
-
-      - name: 打包构建
-        run: pnpm run build
-
-      - name: 部署
-        uses: appleboy/scp-action@master
+      - uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.USER_HOST }}
           username: ${{ secrets.USER_NAME }}
           key: ${{ secrets.KEY }}
-          source: './src/.vuepress/dist'
+          source: ./src/.vuepress/dist
           target: ${{ secrets.USER_TARGET }}
-          rm: true
