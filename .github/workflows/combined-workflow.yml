@@ -59,7 +59,7 @@ jobs:
 
   deploy-pages:
     needs: build
-    if: ${{ vars.DEPLOY_TARGET == 'pages' || vars.DEPLOY_TARGET == 'both' }}
+    if: ${{ env.DEPLOY_TARGET == 'pages' || env.DEPLOY_TARGET == 'both' }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -78,7 +78,7 @@ jobs:
 
   deploy-server:
     needs: build
-    if: ${{ vars.DEPLOY_TARGET == 'server' || vars.DEPLOY_TARGET == 'both' }}
+    if: ${{ env.DEPLOY_TARGET == 'server' || env.DEPLOY_TARGET == 'both' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
