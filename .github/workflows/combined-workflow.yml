@@ -72,7 +72,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src/.vuepress/dist
+          publish_dir: ./dist
           publish_branch: gh-pages
           force_orphan: true  # 保持page分支历史干净
 
@@ -90,5 +90,5 @@ jobs:
           host: ${{ secrets.USER_HOST }}
           username: ${{ secrets.USER_NAME }}
           key: ${{ secrets.KEY }}
-          source: ./src/.vuepress/dist
+          source: ./dist
           target: ${{ secrets.USER_TARGET }}
