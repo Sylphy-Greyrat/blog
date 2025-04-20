@@ -5,7 +5,6 @@ on:
     inputs:
       choice:
         description: '选择要执行的流程'
-        required: true
         default: 'A'
         type: choice
         options:
