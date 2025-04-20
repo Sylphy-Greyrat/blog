@@ -17,15 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Node环境
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 22.9.0
 
       - name: 安装pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
           version: 9.12.1
           run_install: false
@@ -49,7 +49,7 @@ jobs:
           path: src/.vuepress/dist
 
       - name: 缓存pnpm依赖
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache-deps
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
@@ -59,7 +59,7 @@ jobs:
 
   deploy-pages:
     needs: build
-    if: ${{ env.DEPLOY_TARGET == 'pages' || env.DEPLOY_TARGET == 'both' }}
+    if: true
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -69,7 +69,7 @@ jobs:
           name: dist
 
       - name: 部署到Page分支
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/.vuepress/dist
@@ -78,7 +78,7 @@ jobs:
 
   deploy-server:
     needs: build
-    if: ${{ env.DEPLOY_TARGET == 'server' || env.DEPLOY_TARGET == 'both' }}
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
