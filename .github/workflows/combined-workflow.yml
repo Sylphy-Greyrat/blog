@@ -1,15 +1,9 @@
 name: AutoDeploy
 
+inputs:
+  choice: 'A'
+
 on:
-  workflow_dispatch:
-    inputs:
-      choice:
-        description: '选择要执行的流程'
-        default: 'A'
-        type: choice
-        options:
-          - A
-          - B
   push:
     branches:
       - master
