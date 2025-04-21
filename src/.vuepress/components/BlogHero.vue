@@ -1,4 +1,3 @@
-<!-- .vuepress/components/BlogHero.vue -->
 <script setup lang="ts">
 import BlogHero from "vuepress-theme-hope/blog/components/BlogHero.js";
 import HitokotoBlogHero from "vuepress-theme-hope/presets/HitokotoBlogHero.js";
@@ -6,8 +5,8 @@ import HitokotoBlogHero from "vuepress-theme-hope/presets/HitokotoBlogHero.js";
 
 <template>
   <BlogHero>
-    <template #heroInfo="heroInfo">
-      <HitokotoBlogHero v-bind="heroInfo" />
+    <template #info="info">
+      <HitokotoBlogHero v-bind="info" />
     </template>
   </BlogHero>
 </template>

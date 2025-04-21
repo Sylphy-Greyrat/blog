@@ -52,7 +52,7 @@ export default sidebar({
             text: "Vue",
             icon: "iconfont icon-vuejs",
             link: "/posts/vue/"
-        },        {
+        }, {
             text: "Jeecg",
             icon: "fas fa-laptop-code",
             link: "/posts/jeecg/"
@@ -164,7 +164,7 @@ export default sidebar({
         },
         "/Linux/Git/git.md"
     ],
-    "/Linux/Git/":[
+    "/Linux/Git/": [
         {
             text: "Linux",
             icon: "iconfont icon-linux",

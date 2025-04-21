@@ -6,7 +6,7 @@ category:
   - Maven
 tag:
   - Maven
-date: 2022-6-27
+date: 2022-06-27
 icon: iconfont icon-Maven
 ---
 # MAVEN
