@@ -1,0 +1,48 @@
+name: Bug
+title: "Bug: [问题摘要]"
+description: bug template
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Fastjson版本
+      placeholder: 例如 1.2.76 \n example 1.2.76
+    validations:
+      required: true
+  - type: input
+    id: jdk_version
+    attributes:
+      label: JDK版本
+      placeholder: 例如 OpenJDK 11.0.15
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: 例如 Windows 10 / Ubuntu 20.04
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 重现步骤
+      description: 清晰分步说明如何复现问题
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: 预期行为
+      description: 你期望的正常表现是？
+  - type: textarea
+    id: code_sample
+    attributes:
+      label: 最小代码示例
+      description: 请提供可复现问题的最简代码（使用```包裹）
+      render: markdown
+  - type: textarea
+    id: error_log
+    attributes:
+      label: 错误日志/堆栈跟踪
+      description: 请粘贴完整错误日志（使用```包裹）
+      render: markdown
