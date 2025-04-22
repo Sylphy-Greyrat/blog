@@ -1,27 +1,27 @@
 name: Bug
 title: "Bug: [问题摘要]"
-description: bug template
+description: bug template \n Bug 模版
 labels: [bug]
 body:
   - type: input
     id: version
     attributes:
       label: Fastjson版本
-      placeholder: 例如 1.2.76 \n example 1.2.76
+      placeholder: example 1.2.76
     validations:
       required: true
   - type: input
     id: jdk_version
     attributes:
       label: JDK版本
-      placeholder: 例如 OpenJDK 11.0.15
+      placeholder: example OpenJDK 11.0.15
     validations:
       required: true
   - type: input
     id: os
     attributes:
       label: 操作系统
-      placeholder: 例如 Windows 10 / Ubuntu 20.04
+      placeholder: example Windows 10 / Ubuntu 20.04
   - type: textarea
     id: reproduction
     attributes:
