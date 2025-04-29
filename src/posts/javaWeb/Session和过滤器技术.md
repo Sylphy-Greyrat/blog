@@ -29,13 +29,13 @@ icon: iconfont icon-ilter
 
 1. 使用 request 域对象保存商品信息。
 
-   ![request 域保存信息流程](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/request域保存信息流程.png)
+   ![request 域保存信息流程](http://101.43.49.28:9000/blog/request域保存信息流程.png)
 
    结论：使用 request 保存商品信息不可以，因为每次发送请求，就会产生一个新的请求对象。
 
 2. 使用 ServletContext 对象保存商品信息。
 
-   ![ServletContext 域保存信息流程](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/ServletContext域保存信息流程.png)
+   ![ServletContext 域保存信息流程](http://101.43.49.28:9000/blog/ServletContext域保存信息流程.png)
 
    结论：使用 ServletContext 对象保存商品信息，可以，但是不合理。
 
@@ -49,7 +49,7 @@ icon: iconfont icon-ilter
 
   ​	    Cookie 是一种会话管理技术，它是用来保存会话过程中产生的数据，然后在浏览器和服务器交互时，会使用 Cookie 里面保存的数据。
 
-  ![Cookie 的执行原理](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/Cookie的执行原理.png)
+  ![Cookie 的执行原理](http://101.43.49.28:9000/blog/Cookie的执行原理.png)
 
   注意：首次访问服务器，浏览器不会携带 cookie 到服务端。
 
@@ -88,7 +88,7 @@ icon: iconfont icon-ilter
 
 session 是一种会话管理技术，session 用来保存会话过程中的数据，保存的数据存储到服务器端。
 
-![Session 实现原理分析](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/Session实现原理分析.png)
+![Session 实现原理分析](http://101.43.49.28:9000/blog/Session实现原理分析.png)
 
 原理：基于 cookie 实现的，更确切的说是基于会话级别的 cookie 实现的。
 
@@ -120,7 +120,7 @@ session 是一种会话管理技术，session 用来保存会话过程中的数�
 
 ### Filter的概述
 
-​		在开发中，通过浏览器访问服务器端的目标资源，过滤器实现拦截功能，如果过滤器判断是合理的请求，就放行，允许访问目标资源。下图为大概流程：![Filter 拦截过程](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/Filter拦截过程.png)
+​		在开发中，通过浏览器访问服务器端的目标资源，过滤器实现拦截功能，如果过滤器判断是合理的请求，就放行，允许访问目标资源。下图为大概流程：![Filter 拦截过程](http://101.43.49.28:9000/blog/Filter拦截过程.png)
 
 - 常用方法：
   1. ***init()*** 方法：在过滤器对象被创建后，执行初始化方法

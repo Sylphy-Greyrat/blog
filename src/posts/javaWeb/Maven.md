@@ -15,7 +15,7 @@ icon: iconfont icon-Maven
 
 ---
 
-![maven的主体框架](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/maven的主体框架.png)
+![maven的主体框架](http://101.43.49.28:9000/blog/maven的主体框架.png)
 
 ## maven 的安装与配置
 

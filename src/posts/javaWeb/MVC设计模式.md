@@ -40,11 +40,11 @@ MVC 模式是 Web 开发中最常用的一种设计模式，规范了 Web 数据
 
   MVC 设计模式流程如下图所示：
 
-  ![MVC 设计模式流程](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/MVC设计模式流程.png)
+  ![MVC 设计模式流程](http://101.43.49.28:9000/blog/MVC设计模式流程.png)
 
   MVC模式各个组件所对应的技术如下图所示：
 
-  ![MVC 模式的各个组件](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/MVC模式的各个组件.png)
+  ![MVC 模式的各个组件](http://101.43.49.28:9000/blog/MVC模式的各个组件.png)
 
 ## EL 表达式
 
@@ -159,15 +159,15 @@ MVC 模式是 Web 开发中最常用的一种设计模式，规范了 Web 数据
 
 2. 将 jstl 相应的 jar 包添加到工程 lib 目录下。
 
-   ![JSTL 的配置-1](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/JSTL的配置-1.png)
+   ![JSTL 的配置-1](http://101.43.49.28:9000/blog/JSTL的配置-1.png)
 
 3. 在 IDEA 中配置 JSTL 的 tld 模板，***URL:```http://java.sun.com/jsp/jstl/core```。***
 
-   ![JSTL 的配置-2](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/JSTL的配置-2.png)
+   ![JSTL 的配置-2](http://101.43.49.28:9000/blog/JSTL的配置-2.png)
 
 4. 添加 JSTL jar 包，修复 artifact 的错误。
 
-   ![JSTL 的配置-3](https://sylphy-1321175878.cos.ap-guangzhou.myqcloud.com/JSTL的配置-3.png)
+   ![JSTL 的配置-3](http://101.43.49.28:9000/blog/JSTL的配置-3.png)
 
 ### JSTL 中的 Core 标签
 

@@ -34,7 +34,7 @@ export default hopeTheme({
         titleIcon: true,
         hostname: "https://mister-hope.github.io",
         toc: {
-            levels: 4
+            levels: [2, 4]
         },
 
         darkmode: "toggle",
