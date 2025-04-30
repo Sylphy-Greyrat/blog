@@ -32,7 +32,7 @@ export default hopeTheme({
         sidebarSorter: undefined,
         themeColor: true,
         titleIcon: true,
-        hostname: "https://mister-hope.github.io",
+        hostname: "https://blog.sylphy.me",
         toc: {
             levels: [2, 4]
         },
@@ -211,7 +211,6 @@ export default hopeTheme({
 
         // 在这里配置主题提供的插件
         plugins: {
-            sitemap: true,
             blog: true,
             seo: true,
             components: {
@@ -228,6 +227,9 @@ export default hopeTheme({
             //   serverURL: "https://waline-comment.vuejs.press",
             // },
 
+            feed: {
+                rss: true
+            },
             docsearch:{
                 appId: "CJHTE216ZNV",
                 apiKey: "30252943786fb72756d43609c52f61a",
