@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://blog.sylphy.me/rss.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://blog.sylphy.me/rss.xml" rel="self" type="application/rss+xml"/>
+    <title></title>
+    <link>https://blog.sylphy.me/</link>
+    <description>ozh 的博客</description>
+    <language>zh-CN</language>
+    <pubDate>Wed, 30 Apr 2025 01:25:15 GMT</pubDate>
+    <lastBuildDate>Wed, 30 Apr 2025 01:25:15 GMT</lastBuildDate>
+    <generator>@vuepress/plugin-feed</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>规范</category>
+    <category>Git</category>
+    <category>node.js</category>
+    <category>SpringBoot</category>
+    <category>MQ</category>
+    <category>算法</category>
+    <category>Maven</category>
+    <category>Jeecg</category>
+    <category>Vue</category>
+    <item>
+      <title>介绍页</title>
+      <link>https://blog.sylphy.me/intro.html</link>
+      <guid>https://blog.sylphy.me/intro.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">介绍页</source>
+      <description>介绍页 将你的个人介绍和档案放置在此处。</description>
+      <pubDate>Wed, 30 Apr 2025 01:23:37 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>将你的个人介绍和档案放置在此处。</p>
+]]></content:encoded>
+      <enclosure url="https://blog.sylphy.me/assets/images/cover3.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>开发手册</title>
+      <link>https://blog.sylphy.me/posts/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html</link>
+      <guid>https://blog.sylphy.me/posts/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">开发手册</source>
+      <description>开发手册 编程规约 粗体为强制!!! 斜体为推荐!! 正常体为参考! 命名风格 代码中的命名均不能，也不能。 _ name / _ name / $ name / name_ / name $ / name_ 代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。 说明：正确的英文拼写和语法可以让阅读者易于理解，避免歧义。注意，即使纯拼...</description>
+      <category>规范</category>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>编程规约</h2>
+<ul>
+<li><strong>粗体</strong>为强制!!!</li>
+<li><em>斜体</em>为推荐!!</li>
+<li>正常体为参考!</li>
+</ul>
+<h3>命名风格</h3>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/工程结构图.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://blog.sylphy.me/Linux/Git/git.html</link>
+      <guid>https://blog.sylphy.me/Linux/Git/git.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Git</source>
+      <description>集中式与分布式 ​ 集中式版本控制系统（CVCS）和分布式版本控制系统（DVCS）之间存在一些关键的区别，这些区别主要涉及到存储结构、操作方式以及团队协作方面。 存储结构 集中式版本控制系统（CVCS） 中央服务器存储： 所以版本信息都集中纯粹在一个中央服务器上。 开发者在进行任何版本控制操作时，需要与中央服务器进行通信，包括检出、提交、拉去和推送。 ...</description>
+      <category>Git</category>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/指针的变化.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Ajax</title>
+      <link>https://blog.sylphy.me/posts/Ajax/ajax.html</link>
+      <guid>https://blog.sylphy.me/posts/Ajax/ajax.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Ajax</source>
+      <description>AJAX 有关 Ajax 的一些 npm 下载 nodemon：自动重新启动应用程序。 CORS：解决跨域问题 原生 Ajax 原生 Ajax 的 GET 请求 当点击 button 按钮时提交 GET 请求 原生 Ajax 的 POST 请求 当鼠标移动进 &amp;lt;div&amp;gt; 中时发出 POST 请求 说明： POST 方法可以通过 函数实现 POST 方法...</description>
+      <category>node.js</category>
+      <pubDate>Tue, 26 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>有关 Ajax 的一些 npm 下载</h2>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>SpringBoot</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/SpringBoot.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/SpringBoot.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">SpringBoot</source>
+      <description>Spring Boot Spring Boot 的概述 Spring Boot 是基于 Spring 框架开发的全新框架，其设计目的是简新 Sping 应用的初始化搭建和开发过程。 Spring Boot 整合了许多框架和第三方库配置，几乎可以达到“开箱即用” 优点： 可快速构建独立的 Spring 应用 直接嵌入Tomcat 、Jetty 和 Und...</description>
+      <category>SpringBoot</category>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>Spring Boot 的概述</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/JSP页面组成.png" type="image/png"/>
+    </item>
+    <item>
+      <title>SpringBoot Web层</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/SpringBootWeb%E5%B1%82.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/SpringBootWeb%E5%B1%82.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">SpringBoot Web层</source>
+      <description>Spring Boot Web 层 Spring Web获取前端参数的方法Spring Web获取前端参数的方法 SpringBoot Web ⼯作流程 工作流程步骤如下： ⽤户发送请求到前端控制器(DispatcherServlet)； 前端控制器请求 HandlerMapping 查找 Handler；(可根据 xml 配置、注解进行查找、在 Sp...</description>
+      <category>SpringBoot</category>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<figure><img src="http://101.43.49.28:9000/blog/SpringWeb获取前端参数的方法.png" alt="Spring Web获取前端参数的方法" tabindex="0" loading="lazy"><figcaption>Spring Web获取前端参数的方法</figcaption></figure>
+<h2>SpringBoot Web ⼯作流程</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/SpringWeb获取前端参数的方法.png" type="image/png"/>
+    </item>
+    <item>
+      <title>SpringBoot 安全管理</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">SpringBoot 安全管理</source>
+      <description>Spring Boot 安全管理 Spring Security Spring Security 的介绍 Spring Security 是基于 Spring 生态圈的，用于提供安全访问控制解决方案的框架。 Spring Security 的安全管理有两个重要概念，分别是 Authentication（认证）和 Authorization（授权）。 针...</description>
+      <category>SpringBoot</category>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>Spring Security</h2>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>SpringBoot 数据访问</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">SpringBoot 数据访问</source>
+      <description>Spring Boot 数据访问 整合 Mybatis 持久层技术 Mybatis 基础 相关依赖 Mybatis 简介 Mybatis 参考网址：mybatis – MyBatis 3 | 配置 Spring Boot 整合 Mybatis 概述 ​ Spring Boot 默认采用整合 的方式统一处理数据访问层，通过添加大量自动配置，引入各种数据访...</description>
+      <category>SpringBoot</category>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>整合 Mybatis 持久层技术</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/mapper文件工程目录结构.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Spring Boot 消息队列</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Spring Boot 消息队列</source>
+      <description>Spring Boot 消息队列 调用方法 同步调用 ​ 发出一个功能调用时，在没有得到结果之前，该调用就不返回或继续执行后续操作 优点： 时效性高，等待到结果后才返回 缺点： 扩展性差 性能下降 级联失败问题 异步调用的展示异步调用的展示 异步调用 ​ 当一个异步过程调用发出后，调用者在没有得到结果之前，就可以继续执行后续操作。当这个调用完成后，一般...</description>
+      <category>MQ</category>
+      <category>SpringBoot</category>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>调用方法</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/异步调用的展示.png" type="image/png"/>
+    </item>
+    <item>
+      <title>SpringBoot 缓存管理</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E7%BC%93%E5%AD%98%E7%AE%A1%E7%90%86.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E7%BC%93%E5%AD%98%E7%AE%A1%E7%90%86.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">SpringBoot 缓存管理</source>
+      <description>Spring Boot 缓存管理 ​ 是分布式系统中的重要组件，主要解决数据库数据的。在实际开发中，尤其是用户的网站，用户对的访问非常频繁，为了提高服务器、减少数据库的压力、提高用户体验，使用缓存显得尤其重要。 主要注解 @EnaleCaching @EnableCaching 是由 Spring 框架提供的，Spring Boot 框架对该注解进行了...</description>
+      <category>SpringBoot</category>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>​		是分布式系统中的重要组件，主要解决数据库数据的。在实际开发中，尤其是用户的网站，用户对的访问非常频繁，为了提高服务器、减少数据库的压力、提高用户体验，使用缓存显得尤其重要。</p>
+<ul>
+<li>
+<p>主要注解</p>
+<ol>
+<li>
+<p>@EnaleCaching</p>
+<p>@EnableCaching 是由 Spring 框架提供的，Spring Boot 框架对该注解进行了继承，该注解需要配置在类上（在 Spring Boot 中，通常配置在项目启动类上），用于。</p>
+</li>
+<li>
+<p>@Cacheable</p>
+<p>@Cacheable 注解也是由 Spring 框架提供的，可以作用于类或方法（通常用在数据查询方法上），用于对方法结果进行缓存存储。</p>
+<p>@Cacheable 注解的执行顺序是，。</p>
+<p>| 属性名           | 说明                                                         |<br>
+|</p>
+</li>
+</ol>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>SpringBoot 视图</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E8%A7%86%E5%9B%BE.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/SpringBoot%E8%A7%86%E5%9B%BE.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">SpringBoot 视图</source>
+      <description>Spring Boot 视图 视图技术 ​ 前端模版引擎技术的出现，使前端开发人员无需关注后端业务的具体实现。只关注自己页面的呈现效果即可，并且解决了前端代码错综复杂的问题，实现了前后端分离开发。Spring Boot 框架对很多常用的模版引擎技术提供了整合支持，具体介绍如下： FreeMarker：FreeMarker 是一个基于模版生成输出文本( ...</description>
+      <category>SpringBoot</category>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>视图技术</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/DOM树.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Spring 框架</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/Spring%E6%A1%86%E6%9E%B6.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/Spring%E6%A1%86%E6%9E%B6.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Spring 框架</source>
+      <description>Spring 框架 正射与反射 正射与反射的概述 正射：正射就是在运行时就知道要操作的类是什么，并且可以使用 new 关键字来创建对象。 反射：反射就是在运行时才知道要操作的类是什么，并且可以在运行时获取类的完整构造，并调用对应的方法。 优点： 在程序运⾏过程中可以操作类对象，增加了程序的灵活性。 解耦，从而提高程序的可扩展性，提高代码的复用率，⽅便外...</description>
+      <category>SpringBoot</category>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>正射与反射</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/单例模式的概述.png" type="image/png"/>
+    </item>
+    <item>
+      <title>分治</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E5%88%86%E6%B2%BB.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E5%88%86%E6%B2%BB.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">分治</source>
+      <description>分治 分支算法 ​ 「分治 divide and conquer」，全称分而治之，是一种非常重要且常见的算法策略。分治通常基于递归实现，包括“分”和“治”两个步骤。 分（划分阶段）：递归地将原问题分解为两个或多个子问题，直至到达最小子问题时终止。 治（合并阶段）：从已知解的最小子问题开始，从底至顶地将子问题的解进行合并，从而构建出原问题的解。 如下图所...</description>
+      <category>算法</category>
+      <pubDate>Tue, 02 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>分支算法</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/归并排序的分治策略.png" type="image/png"/>
+    </item>
+    <item>
+      <title>哈希表</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E5%93%88%E5%B8%8C%E8%A1%A8.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E5%93%88%E5%B8%8C%E8%A1%A8.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">哈希表</source>
+      <description>哈希表 哈希表 ​ 「哈希表 hash table」，又称「散列表」，它通过建立键 key 与值 value 之间的映射，实现高效的元素查询。具体而言，我们向哈希表中输入一个键 key，则可以在 Ο(1) 时间内获取对应的值 value。 ​ 如下图所示，给定 n 个学生，每个学生都有“姓名”和“学号”两项数据。加入我们希望实现“输入一个学号，返回对应...</description>
+      <category>算法</category>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>哈希表</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/哈希表的抽象表示.png" type="image/png"/>
+    </item>
+    <item>
+      <title>回溯</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E5%9B%9E%E6%BA%AF.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E5%9B%9E%E6%BA%AF.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">回溯</source>
+      <description>回溯 回溯算法 ​ 「回溯算法 backtracking algorithm」是一种通过穷举来解决问题的方法，它的核心思想是从一个初始状态出发，暴力搜索所有可能的解决方案，当遇到正确的解则将其记录，直到找到解或者尝试了所有可能的选择都无法找到解为止。 ​ 回溯算法通常采用“深度优先搜索”来遍历解空间。在“二叉树”中，便提到了前序、中序和后序遍历都属于深...</description>
+      <category>算法</category>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>回溯算法</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/在前序遍历中搜索节点.png" type="image/png"/>
+    </item>
+    <item>
+      <title>图</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E5%9B%BE.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E5%9B%BE.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">图</source>
+      <description>图 图 ​ 「图 graph」是一种非线性数据结构，由「顶点 vertex」和「边 edge」组成。我们可以将图 G 抽象地表示为一组顶点 V 和一组边 E 的集合。以下示例展示了一个包含 5 个顶点和 7 条边的图。 ​V={1,2,3,4,5}E={(1,2),(1,3),(1,5),(2,3),(2,4),(2,5),(4,5)}G={V,E}​...</description>
+      <category>算法</category>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>图</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/链表、树、图之间的关系.png" type="image/png"/>
+    </item>
+    <item>
+      <title>基础算法</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">基础算法</source>
+      <description>基础算法 该笔记是基于 Hello 算法而记录的 主要内容结构 复杂度分析：数据结构和算法的评价维度与方法。时间复杂度和空间复杂度的推算方法、常见类型、示例等。 数据结构：基本数据类型和数据结构的分类方法。数组、链表、栈、队列、哈希表、树、堆、图等数据结构的定义、优缺点、常见操作、常见类型、典型应用、实现方法等。 算法：搜索、排序、分治、回溯、动态规划...</description>
+      <category>算法</category>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<ul>
+<li>该笔记是基于 <a href="https://www.hello-algo.com/" target="_blank" rel="noopener noreferrer">Hello 算法</a>而记录的</li>
+</ul>
+<h2>主要内容结构</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/笔记的主要内容.png" type="image/png"/>
+    </item>
+    <item>
+      <title>堆</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E5%A0%86.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E5%A0%86.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">堆</source>
+      <description>堆 堆 「堆 heap」是一种满足特定条件的完全二叉树，主要可分为两种类型，如下图所示。 「小顶堆 min heap」：任意节点的值 ≤ 其子节点的值 「大顶堆 max heap」：任意节点的值 ≥ 其子节点的值 小顶堆与大顶堆小顶堆与大顶堆 堆作为完全二叉树的一个特例，具有以下特性： 最底层节点靠左填充，其他层的节点都被填满。 我们将二叉树的根节点称...</description>
+      <category>算法</category>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>堆</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/小顶堆与大顶堆.png" type="image/png"/>
+    </item>
+    <item>
+      <title>排序</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">排序</source>
+      <description>排序 排序算法 ​ 「排序算法 sorting algorithm」用于对一组数据按照特定顺序进行排列。排序算法有着广泛的应用，因为有序数据通常能够被更高效地查找、分析和处理。 ​ 如下图所示，排序算法中的数据类型可以是整数、浮点数、字符或字符串等，排序的判断规则可根据需求设定，如数字大小、字符 ASCII 码顺序或自定义规则。 数据类型和判断规则示例...</description>
+      <category>算法</category>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>排序算法</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/数据类型和判断规则示例.png" type="image/png"/>
+    </item>
+    <item>
+      <title>搜索</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E6%90%9C%E7%B4%A2.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E6%90%9C%E7%B4%A2.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">搜索</source>
+      <description>搜索 二元查找 ​ 「二分查找 binary search」是一种基于分治策略的高效搜索算法。它利用数据的有序性，每轮缩小一半搜索范围，直至找到目标元素或搜索区间为空为止。 相关信息 给定一个长度为 n 的数组 nums，元素按从小到大的顺序排序且不重复。请查找并返回元素 target 在该数组中的索引中，若数组不包含该元素，则返回 -1。示例如下图所...</description>
+      <category>算法</category>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>二元查找</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/二分查找示例数据.png" type="image/png"/>
+    </item>
+    <item>
+      <title>数据结构</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">数据结构</source>
+      <description>数据结构 数据结构的分类 ​ 常见的数据结构包括数组、链表、栈、队列、哈希表、树、堆、图，它们可以从“逻辑结构”和“物理结构”两个维度进行分类。 逻辑结构：线性与非线性 ​ 逻辑结构揭示了数据元素之间的逻辑关系。在数组和链表中，数据按照一定顺序排序，体现了数据之间的线性关系；而在树中，数据从顶部向下按层次排序，表现出“祖先”与“后代”之间的派生关系；图...</description>
+      <category>算法</category>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>数据结构的分类</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/线性数据结构与非线性数据结构.png" type="image/png"/>
+    </item>
+    <item>
+      <title>数组与链表</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">数组与链表</source>
+      <description>数组与链表 数组 ​ 「数组 array」是一种线性数据结构，其将相同类型的元素存储在连续的内存空间中。我们将元素在数组中的位置称为该元素的「索引 index」。下图展示了数组的主要概念和存储方式。 数组定义与存储方式数组定义与存储方式 数组常用操作 初始化数组 ​ 我们可以根据需求选用数组的两种初始化方式：无初始值、给定初始值。在未指定初始值的情况下...</description>
+      <category>算法</category>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>数组</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/数组定义与存储方式.png" type="image/png"/>
+    </item>
+    <item>
+      <title>栈与队列</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">栈与队列</source>
+      <description>栈与队列 栈 「栈 stack」是一种遵循先入后出逻辑的线性数据结构。 ​ 我们可以将栈类比为桌面上的一摞盘子，如果想取出底部的盘子，则需要先将上面的盘子依次移走。我们将盘子替换为各种类型的元素（如整数、字符、对象等），就得到了栈这种数据结构。 ​ 如下图所示，我们把堆叠元素的顶部称为“栈顶”，底部称为“栈底”。将把元素添加到栈顶的操作叫作“入栈”，删...</description>
+      <category>算法</category>
+      <pubDate>Wed, 21 Feb 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>栈</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/栈的先入后出规则.png" type="image/png"/>
+    </item>
+    <item>
+      <title>树</title>
+      <link>https://blog.sylphy.me/posts/algorithm/%E6%A0%91.html</link>
+      <guid>https://blog.sylphy.me/posts/algorithm/%E6%A0%91.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">树</source>
+      <description>树 二叉树 ​ 「二叉树 binary tree」是一种非线性数据结构，代表“祖先”与“后代”之间的派生关系，体现了“一分为二”的分治逻辑。与链表类似，二叉树的基本单元是节点，每个节点包含值、左子节点引用和右子节点引用。 ​ 每个节点都有两个引用（指针），分别指向「左子节点 left-child node」和「右子节点 right-child node...</description>
+      <category>算法</category>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>二叉树</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/父节点、子节点、子树.png" type="image/png"/>
+    </item>
+    <item>
+      <title>MVC 设计模式</title>
+      <link>https://blog.sylphy.me/posts/javaWeb/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>https://blog.sylphy.me/posts/javaWeb/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">MVC 设计模式</source>
+      <description>MVC 设计模式 MVC 设计模式的概述 MVC 模式是 Web 开发中最常用的一种设计模式，规范了 Web 数据流的流程，通过数据、视图以及控制分离的方法来组织代码，提高了软件的灵活性和复用性，同时使程序具有对象化特征，也更容易维护。 MVC包括以下三种对象： 模型层（Model）：指从物理世界中抽象出来的对象模型，是应用逻辑的反应；它封装了数据和对...</description>
+      <category>Maven</category>
+      <pubDate>Mon, 11 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>MVC 设计模式的概述</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/MVC设计模式流程.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Maven</title>
+      <link>https://blog.sylphy.me/posts/javaWeb/Maven.html</link>
+      <guid>https://blog.sylphy.me/posts/javaWeb/Maven.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Maven</source>
+      <description>MAVEN maven 的主体框架 maven的主体框架maven的主体框架 maven 的安装与配置 下载 JDK 在 Java 官⽅⽹站 下载并安装 JDK 7.0 及以上版本， JDK 的安装和配置请参考： JDK官网 JDK环境配置 下载 maven maven 官网 maven 环境配置（以下重点） 配置 Maven 本地仓库： 在 sett...</description>
+      <category>Maven</category>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>maven 的主体框架</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/maven的主体框架.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Servlet</title>
+      <link>https://blog.sylphy.me/posts/javaWeb/Servlet.html</link>
+      <guid>https://blog.sylphy.me/posts/javaWeb/Servlet.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Servlet</source>
+      <description>Servlet Servlet 的配置 Servlet 的概述 Servlet 是一个运行在 web 服务器端的一个 java 程序，也可以认为就是一个 java 类，在使用 servlet 时，需要导入 javax.servlet 下的 jar 包，比如：tomcat 服务器提供了 servlet 的 jar 包，所以在开发时用 tomcat 服务器...</description>
+      <category>Maven</category>
+      <pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>Servlet 的配置</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/Servlet的用途.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Session 和过滤器技术</title>
+      <link>https://blog.sylphy.me/posts/javaWeb/Session%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8%E6%8A%80%E6%9C%AF.html</link>
+      <guid>https://blog.sylphy.me/posts/javaWeb/Session%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8%E6%8A%80%E6%9C%AF.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Session 和过滤器技术</source>
+      <description>Session 和过滤器技术 会话的概述 会话：从打开浏览器，到访问网页，到最终关闭浏览器，整个过程就是一次会话。 会话的特点：包含多个请求，一次完整的会话针对一个用户。 会话管理技术： cookie 技术，客户端技术。 session 技术，服务端技术。 购物车案例：买完商品后，加入购物车，买的商品存到什么对象比较合适？ 使用 request 域对象...</description>
+      <category>Maven</category>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>会话的概述</h2>
+]]></content:encoded>
+      <enclosure url="http://101.43.49.28:9000/blog/request域保存信息流程.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Jeecg</title>
+      <link>https://blog.sylphy.me/posts/jeecg/Jeecg-Vue2.html</link>
+      <guid>https://blog.sylphy.me/posts/jeecg/Jeecg-Vue2.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Jeecg</source>
+      <description>相关网址： 项目介绍 - JeecgBoot 文档中心 新手入门教程 · JeecgBoot 开发文档 · 看云</description>
+      <category>Jeecg</category>
+      <pubDate>Wed, 12 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>相关网址：</p>
+<ol>
+<li>
+<p><a href="https://help.jeecg.com/java/readme.html" target="_blank" rel="noopener noreferrer">项目介绍 - JeecgBoot 文档中心</a></p>
+</li>
+<li>
+<p><a href="http://doc.jeecg.com/2043869" target="_blank" rel="noopener noreferrer">新手入门教程 · JeecgBoot 开发文档 · 看云</a></p>
+</li>
+</ol>
+<h1></h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Vue2</title>
+      <link>https://blog.sylphy.me/posts/vue/vue.html</link>
+      <guid>https://blog.sylphy.me/posts/vue/vue.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Vue2</source>
+      <description>Vue 2 相关网站：Vue.js 官网 、尚硅谷Vue技术_课程简介 bilibili Vue 的概述 Vue 是一套用于构建用户界面的渐进式 JavaScript 框架 说明：渐进式是 Vue 可以自底向上逐层的应用，其中： 简单应用：只需一个轻量小巧的核心库 复杂应用：可以引入各式各样的 Vue 插件 Vue 的特点 采用模式，提高代码复用率、且...</description>
+      <category>Vue</category>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>相关网站：<a href="https://v2.cn.vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.js 官网</a> 、<a href="https://www.bilibili.com/video/BV1Zy4y1K7SH/?p=1&amp;vd_source=2114d23407468f3c2bdd77326437e044" target="_blank" rel="noopener noreferrer">尚硅谷Vue技术_课程简介 bilibili</a></p>
+<h2>Vue 的概述</h2>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>技术胖的前端学习路径</title>
+      <link>https://blog.sylphy.me/posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/%E5%A4%A7%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1_B%E7%AB%99%E8%A7%86%E9%A2%91%E6%95%B4%E5%90%88.html</link>
+      <guid>https://blog.sylphy.me/posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/%E5%A4%A7%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1_B%E7%AB%99%E8%A7%86%E9%A2%91%E6%95%B4%E5%90%88.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">技术胖的前端学习路径</source>
+      <description>技术胖的前端学习路径 B站学习资源整合 网络知识 （Internet） 1. 网络工作原理 计算机网络原理：https://www.bilibili.com/video/BV1xJ41137Q3 2. 什么是HTTP HTTP协议详解：https://www.bilibili.com/video/BV1js411g7Fw 3. 浏览器及工作方式 浏览器...</description>
+      <pubDate>Wed, 30 Apr 2025 01:23:37 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>B站学习资源整合</p>
+<h2>网络知识</h2>
+<p>（Internet）</p>
+<h3>1. 网络工作原理</h3>
+<h3><a class="header-anchor" href="#计算机网络原理-https-www-bilibili-com-video-bv1xj41137q3"><span>计算机网络原理：</span></a><a href="https://www.bilibili.com/video/BV1xJ41137Q3" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1xJ41137Q3</a></h3>
+<h3>2. 什么是HTTP</h3>
+<h3><a class="header-anchor" href="#http协议详解-https-www-bilibili-com-video-bv1js411g7fw"><span>HTTP协议详解：</span></a><a href="https://www.bilibili.com/video/BV1js411g7Fw" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1js411g7Fw</a></h3>
+<h3>3. 浏览器及工作方式</h3>
+<h3><a class="header-anchor" href="#浏览器是如何运作的-https-www-bilibili-com-video-bv1x54y1b7re"><span>浏览器是如何运作的？：</span></a><a href="https://www.bilibili.com/video/BV1x54y1B7RE" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1x54y1B7RE</a></h3>
+<h3>4. DNS 及其工作原理</h3>
+<h3><a class="header-anchor" href="#dns基本工作原理-https-www-bilibili-com-video-bv1gw411j7ts"><span>DNS基本工作原理：</span></a><a href="https://www.bilibili.com/video/BV1GW411j7Ts" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1GW411j7Ts</a></h3>
+<h3><a class="header-anchor" href="#直观dns科普-https-www-bilibili-com-video-bv1f54y1r7bc"><span>直观DNS科普：</span></a><a href="https://www.bilibili.com/video/BV1F54y1R7BC" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1F54y1R7BC</a></h3>
+<h3>5. 域名相关知识</h3>
+<h3><a class="header-anchor" href="#域名解析完整讲解-https-www-bilibili-com-video-bv1za411x7pj"><span>域名解析完整讲解：</span></a><a href="https://www.bilibili.com/video/BV1zA411x7Pj" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1zA411x7Pj</a></h3>
+<h3>6. 云服务相关知识</h3>
+<h3><a class="header-anchor" href="#揭秘阿里云服务器-https-www-bilibili-com-video-bv1rt411u7k4"><span>揭秘阿里云服务器：</span></a><a href="https://www.bilibili.com/video/BV1Rt411u7k4" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Rt411u7k4</a></h3>
+<h2>超文本标记语言</h2>
+<p>（HTML）</p>
+<h3>1. HTML基础知识学习</h3>
+<h3><a class="header-anchor" href="#html全套基础教程-https-www-bilibili-com-video-bv11t411k74q"><span>HTML全套基础教程：</span></a><a href="https://www.bilibili.com/video/BV11t411K74Q" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV11t411K74Q</a></h3>
+<h3>2. HTML 编写规则 和语义化写法</h3>
+<h3><a class="header-anchor" href="#html-速成-https-www-bilibili-com-video-bv1vs411m7at"><span>HTML 速成：</span></a><a href="https://www.bilibili.com/video/BV1vs411M7aT" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1vs411M7aT</a></h3>
+<h3>3. 表单和验证</h3>
+<h3><a class="header-anchor" href="#html5表单验证-https-www-bilibili-com-video-bv16k4y1z7gb"><span>html5表单验证：</span></a><a href="https://www.bilibili.com/video/BV16K4y1Z7Gb" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV16K4y1Z7Gb</a></h3>
+<h3>4. 公约和最佳实践方法</h3>
+<h3><a class="header-anchor" href="#前端代码规范秘籍-https-www-bilibili-com-video-bv19p4y147jz"><span>前端代码规范秘籍：</span></a><a href="https://www.bilibili.com/video/BV19P4y147Jz" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV19P4y147Jz</a></h3>
+<h3>5. SEO 基础知识</h3>
+<h3><a class="header-anchor" href="#seo优化学习教程-https-www-bilibili-com-video-bv1fe411j7ya"><span>SEO优化学习教程：</span></a><a href="https://www.bilibili.com/video/BV1fE411J7ya" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1fE411J7ya</a></h3>
+<h2>层叠样式表</h2>
+<p>（CSS)</p>
+<h3>1. CSS 基础知识学习</h3>
+<h3><a class="header-anchor" href="#css3基础教程-https-www-bilibili-com-video-bv1bx411u7cs"><span>CSS3基础教程：</span></a><a href="https://www.bilibili.com/video/BV1Bx411u7cS" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Bx411u7cS</a></h3>
+<h3><a class="header-anchor" href="#css3全套教程-https-www-bilibili-com-video-bv1et411q74f"><span>CSS3全套教程：</span></a><a href="https://www.bilibili.com/video/BV1et411q74F" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1et411q74F</a></h3>
+<h3>2. 页面切图和布局实现</h3>
+<ul>
+<li>浮动布局</li>
+<li>浮动布局：<a href="https://www.bilibili.com/video/BV1Zs411j7Z3" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Zs411j7Z3</a></li>
+<li>定位布局</li>
+<li>CSS定位布局：<a href="https://www.bilibili.com/video/BV1ni4y1g7tc" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1ni4y1g7tc</a></li>
+<li>Display</li>
+<li>display&amp;visibility：<a href="https://www.bilibili.com/video/BV1HJ411M7CM" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1HJ411M7CM</a></li>
+<li>盒子模型</li>
+<li>CSS盒子模型与定位：<a href="https://www.bilibili.com/video/BV1P7411G7BW" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1P7411G7BW</a></li>
+<li>Grid 布局</li>
+<li>如何用grid：<a href="https://www.bilibili.com/video/BV14C4y1W7oA" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV14C4y1W7oA</a></li>
+<li>Flex 布局</li>
+<li>Flex伸缩布局：<a href="https://www.bilibili.com/video/BV1BJ41197XE" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1BJ41197XE</a></li>
+</ul>
+<h3>3. 页面响应式布局设计</h3>
+<h3><a class="header-anchor" href="#六个案例学会响应式布局-https-www-bilibili-com-video-bv1ov411k7sm"><span>六个案例学会响应式布局：</span></a><a href="https://www.bilibili.com/video/BV1ov411k7sm" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1ov411k7sm</a></h3>
+<h2>浏览器脚本语言</h2>
+<p>(JavaScript)</p>
+<h3>1. JavaScript基础语法和知识</h3>
+<h3><a class="header-anchor" href="#javascript基础语法-https-www-bilibili-com-video-bv1sy4y1c7ha"><span>JavaScript基础语法：</span></a><a href="https://www.bilibili.com/video/BV1Sy4y1C7ha" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Sy4y1C7ha</a></h3>
+<h3>2. 使用JavaScript 操作 DOM元素</h3>
+<h3><a class="header-anchor" href="#js必会的dom-bom操作-https-www-bilibili-com-video-bv1k4411w7sv"><span>JS必会的DOM BOM操作：</span></a><a href="https://www.bilibili.com/video/BV1k4411w7sV" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1k4411w7sV</a></h3>
+<h3>3. Ajax 异步请求相关知识学习</h3>
+<h3><a class="header-anchor" href="#ajax入门到精通-https-www-bilibili-com-video-bv1wc4y1b78y"><span>Ajax入门到精通：</span></a><a href="https://www.bilibili.com/video/BV1WC4y1b78y" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1WC4y1b78y</a></h3>
+<h3>4. ES6 以上版本 的JavaScript</h3>
+<h3><a class="header-anchor" href="#es6-es11新特性-https-www-bilibili-com-video-bv1uk411h7on"><span>ES6-ES11新特性：</span></a><a href="https://www.bilibili.com/video/BV1uK411H7on" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1uK411H7on</a></h3>
+<h2>版本控制管理系统</h2>
+<p>Version Control System</p>
+<h3>1.  Git的基本用法</h3>
+<h3><a class="header-anchor" href="#git最新教程-https-www-bilibili-com-video-bv1fe411p7b3"><span>Git最新教程：</span></a><a href="https://www.bilibili.com/video/BV1FE411P7B3" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1FE411P7B3</a></h3>
+<h3>2.  相关平台/软件的使用</h3>
+<ul>
+<li>GitHub</li>
+<li>十分钟学会Github：<a href="https://www.bilibili.com/video/BV1yo4y1d7UK" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1yo4y1d7UK</a></li>
+<li>GitLab</li>
+<li>gitlab使用说明：<a href="https://www.bilibili.com/video/BV11E411x7Uv" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV11E411x7Uv</a></li>
+<li>Gitee</li>
+<li>这个看中文网址就可以了，目前B站还没有很好的视频介绍</li>
+</ul>
+<h2>网络安全相关知识</h2>
+<p>Web Security Knowledge</p>
+<h3>1. HTTPS 原理和使用</h3>
+<h3><a class="header-anchor" href="#你连https原理都不懂-https-www-bilibili-com-video-bv1up4y1i7pg"><span>你连HTTPS原理都不懂：</span></a><a href="https://www.bilibili.com/video/BV1Up4y1i7PG" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Up4y1i7PG</a></h3>
+<h3>2. CORS 跨域请求和安全知识</h3>
+<h3><a class="header-anchor" href="#什么是cors-https-www-bilibili-com-video-bv1kt411e76z"><span>什么是CORS：</span></a><a href="https://www.bilibili.com/video/BV1Kt411E76z" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Kt411E76z</a></h3>
+<h3>3. 内容安全策略</h3>
+<h3><a class="header-anchor" href="#网络渗透-https-www-bilibili-com-video-bv1kh411w7vv"><span>网络渗透：</span></a><a href="https://www.bilibili.com/video/BV1kh411W7Vv" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1kh411W7Vv</a></h3>
+<h3>4. OWASP 安全风险知识</h3>
+<h3><a class="header-anchor" href="#owasp-top10-https-www-bilibili-com-video-bv1ey4y1v7jj"><span>OWASP  TOP10：</span></a><a href="https://www.bilibili.com/video/BV1ey4y1V7Jj" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1ey4y1V7Jj</a></h3>
+<h2>包管理工具</h2>
+<p>Package Managers</p>
+<h3>1. npm</h3>
+<h3><a class="header-anchor" href="#包管理工具-https-www-bilibili-com-video-bv1dv411w7xp"><span>包管理工具：</span></a><a href="https://www.bilibili.com/video/BV1Dv411W7XP" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Dv411W7XP</a></h3>
+<h3>2. yarn</h3>
+<h3><a class="header-anchor" href="#yarn入门-https-www-imooc-com-learn-766-b站没有-推荐这个免费"><span>Yarn入门：</span></a><a href="https://www.imooc.com/learn/766" target="_blank" rel="noopener noreferrer">https://www.imooc.com/learn/766</a>  (B站没有，推荐这个免费)</h3>
+<h2>CSS 预处理 语言</h2>
+<p>CSS Preprocessors</p>
+<h3>1. Sass</h3>
+<h3><a class="header-anchor" href="#scss从入门到实战-https-www-bilibili-com-video-bv1zg4y1v75u"><span>SCSS从入门到实战：</span></a><a href="https://www.bilibili.com/video/BV1Zg4y1v75U" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Zg4y1v75U</a></h3>
+<h3>2. PostCSS</h3>
+<h3>B站没太好的视频，建议买书《深入PostCSS Web设计》</h3>
+<h3>3. Less</h3>
+<h3><a class="header-anchor" href="#前端less教程-https-www-bilibili-com-video-bv1yw411t7vd"><span>前端less教程：</span></a><a href="https://www.bilibili.com/video/BV1YW411T7vd" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1YW411T7vd</a></h3>
+<h2>构建工具</h2>
+<p>Build Tools</p>
+<h3>1. 任务执行命令</h3>
+<p>[Task Runners]</p>
+<ul>
+<li>npm scripts</li>
+<li>npm包管理应用：<a href="https://www.bilibili.com/video/BV1Dv411W7XP" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Dv411W7XP</a></li>
+<li>Gulp</li>
+<li>Gulp入门：<a href="https://www.bilibili.com/video/BV1yA411s72G" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1yA411s72G</a></li>
+</ul>
+<h3>2. 打包工具</h3>
+<ul>
+<li>Webpack</li>
+<li>Webpack从入门到精通：<a href="https://www.bilibili.com/video/BV1e7411j7T5" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1e7411j7T5</a></li>
+<li>Parcel</li>
+<li>Parcel初体验：<a href="https://www.bilibili.com/video/BV1Pa4y147Kf" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Pa4y147Kf</a></li>
+</ul>
+<h3>3. 代码格式化工具</h3>
+<ul>
+<li>Prettier</li>
+<li>Prettier和ESLint使用：<a href="https://www.bilibili.com/video/BV183411r7YK" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV183411r7YK</a></li>
+<li>ESLint</li>
+<li>ESLint基础入门：<a href="https://space.bilibili.com/390120104/search/video?keyword=ESLint" target="_blank" rel="noopener noreferrer">https://space.bilibili.com/390120104/search/video?keyword=ESLint</a></li>
+</ul>
+<h2>三大前端框架</h2>
+<p>Web Framework</p>
+<h3>React.js</h3>
+<h3><a class="header-anchor" href="#react基础视频-https-www-bilibili-com-video-bv1g4411i7po"><span>React基础视频：</span></a><a href="https://www.bilibili.com/video/BV1g4411i7po" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1g4411i7po</a></h3>
+<h3><a class="header-anchor" href="#react全家桶-https-www-bilibili-com-video-bv1wy4y1d7jt"><span>React全家桶：</span></a><a href="https://www.bilibili.com/video/BV1wy4y1D7JT" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1wy4y1D7JT</a></h3>
+<h3><a class="header-anchor" href="#react实战博客-https-www-bilibili-com-video-bv1cj411377b"><span>React实战博客：</span></a><a href="https://www.bilibili.com/video/BV1CJ411377B" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1CJ411377B</a></h3>
+<h3><a class="header-anchor" href="#react商城实战-https-www-bilibili-com-video-bv1i5411c7xp"><span>React商城实战：</span></a><a href="https://www.bilibili.com/video/BV1i5411c7xp" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1i5411c7xp</a></h3>
+<h3>Vue.js</h3>
+<h3><a class="header-anchor" href="#vue2全家桶-https-www-jspang-com-detailed-id-57"><span>Vue2全家桶：</span></a><a href="https://www.jspang.com/detailed?id=57" target="_blank" rel="noopener noreferrer">https://www.jspang.com/detailed?id=57</a></h3>
+<h3><a class="header-anchor" href="#vue3全家桶-https-www-jspang-com-detailed-id-67"><span>Vue3全家桶：</span></a><a href="https://www.jspang.com/detailed?id=67" target="_blank" rel="noopener noreferrer">https://www.jspang.com/detailed?id=67</a></h3>
+<h3><a class="header-anchor" href="#vuejs从入门到精通-https-www-bilibili-com-video-bv1zy4y1k7sh"><span>vuejs从入门到精通：</span></a><a href="https://www.bilibili.com/video/BV1Zy4y1K7SH" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Zy4y1K7SH</a></h3>
+<h3>Angular</h3>
+<h3><a class="header-anchor" href="#angular基础-https-www-bilibili-com-video-bv1wx411r7qt"><span>Angular基础：</span></a><a href="https://www.bilibili.com/video/BV1Wx411R7qt" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Wx411R7qt</a></h3>
+<h2>Web 组件化编程</h2>
+<p>Web Components</p>
+<h3>HTML Templates</h3>
+<h3>Custom Elements</h3>
+<h3>Shadow DOM</h3>
+<h3>概要: 此部分内容没有找到合适视频</h3>
+<h2>CSS 相关框架</h2>
+<p>CSS Frameworks</p>
+<h3>BootStrap</h3>
+<h3><a class="header-anchor" href="#一周学会bootstrap-https-www-bilibili-com-video-bv1lx411v73k"><span>一周学会BootStrap：</span></a><a href="https://www.bilibili.com/video/BV1Lx411v73k" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Lx411v73k</a></h3>
+<h3>Material UI</h3>
+<h3><a class="header-anchor" href="#material-ui入门教程-https-www-bilibili-com-video-bv12j411s75b"><span>Material  UI入门教程：</span></a><a href="https://www.bilibili.com/video/BV12J411s75b" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV12J411s75b</a></h3>
+<h3>Materialize CSS</h3>
+<h3><a class="header-anchor" href="#materialize-css-crash-course-https-www-bilibili-com-video-bv1gx411h7y5"><span>Materialize CSS Crash Course：</span></a><a href="https://www.bilibili.com/video/BV1gx411h7Y5" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1gx411h7Y5</a></h3>
+<h3>ReactStrap</h3>
+<h2>JavaScript 语法糖</h2>
+<p>Type Checkers</p>
+<h3>TypeScript</h3>
+<h3><a class="header-anchor" href="#typescript从入门到精通-https-www-bilibili-com-video-bv1qv41167vd"><span>TypeScript从入门到精通：</span></a><a href="https://www.bilibili.com/video/BV1qV41167VD" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1qV41167VD</a></h3>
+<h3>Flow</h3>
+<h2>服务端渲染</h2>
+<p>Server Side  Rendering （SSR）</p>
+<h3>React.js</h3>
+<ul>
+<li>Next.js</li>
+<li>Next.js入门教程：<a href="https://www.bilibili.com/video/BV13441117KK" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV13441117KK</a></li>
+<li>GatsbyJS</li>
+<li>GatsbyJS 实战：<a href="https://www.bilibili.com/video/BV1i4411T7AR" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1i4411T7AR</a> （英文）</li>
+</ul>
+<h3>Vue.js</h3>
+<ul>
+<li>Nuxt.js</li>
+<li>Nuxt.js入门：<a href="https://www.bilibili.com/video/BV1Xt41117Kg" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Xt41117Kg</a></li>
+</ul>
+<h3>Angular</h3>
+<ul>
+<li>Universal</li>
+</ul>
+<h2>图形化编程</h2>
+<p>GraphQL</p>
+<h3>Cocos Creator</h3>
+<h3><a class="header-anchor" href="#cocos-图形游戏开发-https-www-bilibili-com-video-bv1sa411y7x4"><span>Cocos 图形游戏开发：</span></a><a href="https://www.bilibili.com/video/BV1sA411Y7x4" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1sA411Y7x4</a></h3>
+<h3>Three.js</h3>
+<h3><a class="header-anchor" href="#three-js基础教程-英文-https-www-bilibili-com-video-bv1ks411w78i"><span>Three.js基础教程-英文：</span></a><a href="https://www.bilibili.com/video/BV1ks411W78i" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1ks411W78i</a></h3>
+<h3><a class="header-anchor" href="#three-js教程-https-www-bilibili-com-video-bv1va4y1p7qb"><span>Three.js教程：</span></a><a href="https://www.bilibili.com/video/BV1va4y1p7QB" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1va4y1p7QB</a></h3>
+<h2>静态站点生成器</h2>
+<p>Static Site Generators</p>
+<h3>Next.js</h3>
+<h3><a class="header-anchor" href="#next-js入门教程-https-www-bilibili-com-video-bv13441117kk"><span>Next.js入门教程：</span></a><a href="https://www.bilibili.com/video/BV13441117KK" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV13441117KK</a></h3>
+<h3>GatsbyJS</h3>
+<h3><a class="header-anchor" href="#gatsbyjs-实战-https-www-bilibili-com-video-bv1i4411t7ar-英文"><span>GatsbyJS 实战：</span></a><a href="https://www.bilibili.com/video/BV1i4411T7AR" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1i4411T7AR</a> （英文）</h3>
+<h3>Nuxt.js</h3>
+<h3><a class="header-anchor" href="#nuxt-js入门-https-www-bilibili-com-video-bv1xt41117kg"><span>Nuxt.js入门：</span></a><a href="https://www.bilibili.com/video/BV1Xt41117Kg" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Xt41117Kg</a></h3>
+<h3>Vuepress</h3>
+<h3><a class="header-anchor" href="#vuepress入门到精通-https-www-bilibili-com-video-bv1vb411m7ny"><span>Vuepress入门到精通：</span></a><a href="https://www.bilibili.com/video/BV1vb411m7NY" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1vb411m7NY</a></h3>
+<h3>Hugo</h3>
+<h3><a class="header-anchor" href="#_10分钟搭建个人网站-https-www-bilibili-com-video-bv1x64y117px"><span>10分钟搭建个人网站：</span></a><a href="https://www.bilibili.com/video/BV1x64y117PX" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1x64y117PX</a></h3>
+<h2>移动App开发</h2>
+<p>Mobile Applications</p>
+<h3>React  Native</h3>
+<h3><a class="header-anchor" href="#reactnatvie基础-https-www-bilibili-com-video-bv1eg4y16735"><span>ReactNatvie基础：</span></a><a href="https://www.bilibili.com/video/BV1Eg4y16735" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Eg4y16735</a></h3>
+<h3><a class="header-anchor" href="#reactnatvie实战-https-www-bilibili-com-video-bv15k411s75p"><span>ReactNatvie实战：</span></a><a href="https://www.bilibili.com/video/BV15K411s75p" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV15K411s75p</a></h3>
+<h3>UniApp</h3>
+<h3><a class="header-anchor" href="#uni-app从入门到实战-https-www-bilibili-com-video-bv1bj411w7px"><span>Uni-App从入门到实战：</span></a><a href="https://www.bilibili.com/video/BV1BJ411W7pX" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1BJ411W7pX</a></h3>
+<h3><a class="header-anchor" href="#uni-app美团外卖-https-www-bilibili-com-video-bv1zt4y117rr"><span>Uni-App美团外卖：</span></a><a href="https://www.bilibili.com/video/BV1Zt4y117RR" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Zt4y117RR</a></h3>
+<h3>Flutter</h3>
+<h3><a class="header-anchor" href="#flutter基础-https-www-bilibili-com-video-bv15t411u7yf"><span>Flutter基础：</span></a><a href="https://www.bilibili.com/video/BV15t411U7yf" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV15t411U7yf</a></h3>
+<h3><a class="header-anchor" href="#flutter实战-https-www-bilibili-com-video-bv1kt411b7mu"><span>Flutter实战：</span></a><a href="https://www.bilibili.com/video/BV1kt411B7mu" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1kt411B7mu</a></h3>
+<h3>Ionic</h3>
+<h3><a class="header-anchor" href="#ionic入门-https-www-bilibili-com-video-bv1ub41117q5"><span>Ionic入门：</span></a><a href="https://www.bilibili.com/video/BV1Ub41117q5" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1Ub41117q5</a></h3>
+<h2>桌面应用开发</h2>
+<p>Desktop Applications</p>
+<h3>Electron</h3>
+<h3><a class="header-anchor" href="#electron入门-https-www-bilibili-com-video-bv1qb4y1f722"><span>Electron入门：</span></a><a href="https://www.bilibili.com/video/BV1QB4y1F722" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1QB4y1F722</a></h3>
+<h3><a class="header-anchor" href="#electron基础-https-www-bilibili-com-video-bv177411s7lt"><span>Electron基础：</span></a><a href="https://www.bilibili.com/video/BV177411s7Lt" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV177411s7Lt</a></h3>
+<h2>学到此处，基础部分学习已经全部完成。</h2>
+<h2>学习重要程度说明</h2>
+<h3>红色-精通：非常重要，需要达到精通、并有实战经验</h3>
+<h3>蓝色-熟练：需要达到熟练，达到一定的基础练习量</h3>
+<h3>灰色-了解：需要了解，把整个课程听完，作几个小练习即可</h3>
+<h3>视频学习地址：复制后浏览器打开就可以学习</h3>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Mybatis-plus</title>
+      <link>https://blog.sylphy.me/posts/SpringBoot/mybatis-plus/mybatis-plus.html</link>
+      <guid>https://blog.sylphy.me/posts/SpringBoot/mybatis-plus/mybatis-plus.html</guid>
+      <source url="https://blog.sylphy.me/rss.xml">Mybatis-plus</source>
+      <description>Mybatis-plus 相关依赖 Mybatis-plus 介绍 特性： 无侵入：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑。 损耗小：启动即会自动注入基本 CURD，性能基本无损耗，直接面向对象操作，BaseMapper。 强大的 CRUD 操作：内置通用 Mapper 、通用 Service，仅仅通过少量配置即可实现单表大部分 C...</description>
+      <category>SpringBoot</category>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
